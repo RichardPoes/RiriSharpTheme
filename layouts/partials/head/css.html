@@ -1,0 +1,6 @@
+{{ $sass := resources.Get "sass/main.scss" }}
+{{ $style := $sass | css.Sass | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ $icons := resources.Get "css/bootstrap-icons.min.css" }}
+{{ $iconStyle := $icons | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $iconStyle.Permalink }}" integrity="{{ $iconStyle.Data.Integrity }}">
