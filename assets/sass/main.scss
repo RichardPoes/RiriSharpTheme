@@ -10,6 +10,7 @@
 @import "bootstrap-dark-theme-overrides";
 
 // Rest of the code goes here
+@import 'ririsharper/fonts';
 .navbar-toggler {
     border: none;
 }
@@ -22,4 +23,12 @@
     height: 1.5em;
     vertical-align: middle;
     background-size: 100%;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar-nav .nav-link.active {
+    text-decoration: underline;
 }

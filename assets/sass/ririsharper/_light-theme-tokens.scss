@@ -22,8 +22,10 @@ $light-theme-body-bg: $richard-grey-100;
 $light-theme-link-hover-color-rgb: to-rgb($richard-red-400);
 
 // Logo
-$light-theme-logo-fill: $light-theme-red;
+$light-theme-logo-fill: $richard-grey-100;
 
-// Nav bar
-$light-theme-navbar-toggler-color: $richard-grey-700;
-$light-theme-navbar-toggler-focus-color: $richard-grey-900;
+// Navbar
+$light-theme-navbar-active-color: $richard-grey-100;
+$light-theme-nav-link-color: $richard-grey-100;
+$light-theme-navbar-toggler-color: $richard-grey-100;
+$light-theme-navbar-toggler-focus-color : $richard-grey-100;

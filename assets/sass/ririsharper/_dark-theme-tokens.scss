@@ -1,11 +1,11 @@
 @import 'colors';
 
 // Some reusable variables first.
-$dark-theme-red: $richard-pale-red-500;
-$dark-theme-blue: $richard-pale-blue-500;
+$dark-theme-red: $richard-red-500;
+$dark-theme-blue: $richard-blue-500;
 $dark-theme-yellow: $richard-yellow-500;
-$dark-theme-green: $richard-pale-green-500;
-$dark-theme-purple: $richard-pale-purple-500;
+$dark-theme-green: $richard-green-500;
+$dark-theme-purple: $richard-purple-500;
 
 $dark-theme-red-rgb: to-rgb($dark-theme-red);
 
@@ -25,11 +25,13 @@ $dark-theme-link-hover-color-rgb: to-rgb($richard-pale-red-600);
 
 // Dropdown
 $dark-theme-dropdown-link-active-bg: $dark-theme-red;
-$dark-theme-dropdown-link-active-color: $richard-grey-1000;
+$dark-theme-dropdown-link-active-color: $richard-grey-100;
 
 // Logo
-$dark-theme-logo-fill: $dark-theme-red;
+$dark-theme-logo-fill: $richard-grey-200;
 
 // Navbar
-$dark-theme-navbar-toggler-color: $richard-grey-400;
-$dark-theme-navbar-toggler-focus-color : $richard-grey-200;
+$dark-theme-navbar-active-color: $richard-grey-100;
+$dark-theme-nav-link-color: $richard-grey-100;
+$dark-theme-navbar-toggler-color: $richard-grey-100;
+$dark-theme-navbar-toggler-focus-color : $richard-grey-100;

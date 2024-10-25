@@ -9,3 +9,6 @@ I have tried to leave as much as possible the same, while offering a unique styl
 ## Installation
 
 ## Configuration
+
+## Attributions
+- The font [Garet](https://www.typeforward.com/typefaces/garet) has been from Type forward.

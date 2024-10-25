@@ -1,4 +1,12 @@
 @import 'ririsharper/other-tokens';
 
+// Fonts
+$font-family-sans-serif: $richard-body-font;
+$headings-font-family: $richard-headings-font;
+$font-size-base: $richard-body-font-size;
+
+// Navbar
 $nav-link-font-size: $richard-nav-link-font-size;
 $navbar-toggler-font-size: $richard-navbar-toggler-font-size;
+$navbar-nav-link-padding-x: $richard-nav-link-padding-x;
+$nav-link-font-weight: bold;
