@@ -32,3 +32,15 @@
 .navbar-nav .nav-link.active {
     text-decoration: underline;
 }
+
+.border.border-hover-primary:hover {
+    border-color: $primary !important;
+}
+
+.border.border-hover-secondary:hover {
+    border-color: $secondary !important;
+}
+
+.border.border-hover-tertiary:hover {
+    border-color: $tertiary !important;
+}

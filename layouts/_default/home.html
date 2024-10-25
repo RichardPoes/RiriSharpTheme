@@ -1,9 +1,21 @@
 {{ define "main" }}
-<div class="container-xxl">
+<div class="container-xxl pt-2">
   {{ .Content }}
   {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+    <div class="row my-4 mx-2 mx-lg-0 p-2 border rounded border-2 position-relative border-hover-tertiary">
+        <div class="col-12 col-lg-3">
+          <div class="h-100">
+          <div class="ratio ratio-1x1">
+            <img src="/images/placeholder.jpg" class="img-fluid p-2 my-auto" alt="placeholder">
+          </div>
+        </div>
+        </div>
+        <div class="col-12 col-lg-9">
+          <h2>{{ .LinkTitle }}</h2>
+          <div>{{ .Summary | strings.Truncate 900 }}</div>
+          <a href="{{ .RelPermalink }}" class="stretched-link">Read full post</a>
+        </div>
+    </div>
   {{ end }}
 </div>
 {{ end }}
