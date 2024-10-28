@@ -16,3 +16,4 @@ I have tried to leave as much functionality the same, while offering a unique st
 ## Attributions
 - The font [Quicksand](https://www.dafont.com/quicksand.font) by [Andrew Paglinawan](https://www.dafont.com/andrew-paglinawan.d3799) has been used. 
 The license has to be included during redistribution and can be found [here](/static/fonts/Quicksand/License.txt).
+- The [Ananke](https://github.com/theNewDynamic/gohugo-theme-ananke) theme has been used as a starting point.
