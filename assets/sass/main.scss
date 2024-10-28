@@ -44,3 +44,11 @@
 .border.border-hover-tertiary:hover {
     border-color: $tertiary !important;
 }
+
+a {
+    text-decoration: none;
+}
+
+[class*=" border-hover-"] a:hover {
+    text-decoration: underline;
+}

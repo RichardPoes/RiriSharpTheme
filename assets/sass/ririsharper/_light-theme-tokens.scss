@@ -19,7 +19,9 @@ $light-theme-body-bg: $richard-grey-100;
 // Links
 
 // Dropdown
-$light-theme-link-hover-color-rgb: to-rgb($richard-red-400);
+$light-theme-link-hover-color-rgb: to-rgb($richard-red-500);
+$light-theme-dropdown-link-active-bg: $light-theme-red;
+$light-theme-dropdown-link-active-color: $richard-grey-100;
 
 // Logo
 $light-theme-logo-fill: $richard-grey-100;
