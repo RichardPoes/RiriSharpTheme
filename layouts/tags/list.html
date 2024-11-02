@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="container-xxl pt-2">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ range .Pages }}
+    <div class="row my-4 mx-2 mx-lg-0 p-2 border rounded border-2 position-relative border-hover-tertiary">
+        <div class="col-auto">
+            <h2>
+                <span class="badge rounded-pill text-bg-secondary">{{ .LinkTitle }}</span>
+            </h2>
+        </div>
+        <div class="col">
+            <div class="d-flex justify-content-end">
+                <a href="{{ .RelPermalink }}" class="stretched-link">View more with this tag</a>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

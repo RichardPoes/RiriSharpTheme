@@ -2,22 +2,30 @@
 <div class="container-xxl pt-2">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
-  {{ range .Pages }}
+  {{ $regularPages := where .Site.RegularPages "Params.notRegular" "!=" true }}
+  {{ range $regularPages }}
   <div class="row my-4 mx-2 mx-lg-0 p-2 border rounded border-2 position-relative border-hover-tertiary">
     <div class="col-12 col-lg-3">
       <div class="h-100">
         <div class="ratio ratio-1x1">
-          <img src="/images/placeholder.jpg" class="img-fluid p-2 my-auto" alt="placeholder">
+          {{ $path := "cover.jpg" }}
+          {{ with .Resources.Get $path }}
+          <img src="{{ .RelPermalink }}" class="img-fluid p-2 my-auto" alt="cover image">
+          {{ else }}
+          <img src="/images/fallback.jpg" class="img-fluid p-2 my-auto" alt="placeholder">
+          {{ end }}
         </div>
       </div>
     </div>
     <div class="col-12 col-lg-9">
-      <h2>{{ .LinkTitle }}</h2>
-      <div>{{ .Summary | strings.Truncate 500 }}</div>
-    </div>
-    <div class="col-12">
-      <div class="d-flex justify-content-end">
-        <a href="{{ .RelPermalink }}" class="stretched-link">Click to read full post</a>
+      <div class="d-flex flex-column justify-content-between h-100">
+        <div>
+          <h2>{{ .LinkTitle }}</h2>
+          <div>{{ .Summary | strings.Truncate 500 }}</div>
+        </div>
+        <div class="d-flex justify-content-end">
+          <a href="{{ .RelPermalink }}" class="stretched-link">Click to read full post</a>
+        </div>
       </div>
     </div>
   </div>

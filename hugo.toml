@@ -1,6 +1,10 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-US'
-title = 'My New Hugo Site'
+title = 'RiRiSharp Hugo Template Site'
+
+[author]
+name = "John Doe"
+email = "john.doe@example.com"
 
 [[menus.main]]
 name = 'Home'
@@ -16,6 +20,11 @@ weight = 20
 name = 'Tags'
 pageRef = '/tags'
 weight = 30
+
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 40
 
 [module]
   [module.hugoVersion]
