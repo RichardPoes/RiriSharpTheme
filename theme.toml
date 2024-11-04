@@ -7,7 +7,7 @@ description = 'A bright minimalistic, responsive, color preference friendly them
 homepage = 'https://github.com/RichardPoes/RiriSharpTheme'
 
 # If you have a running demo of the theme
-demosite = 'https://owner.github.io/repo'
+demosite = 'https://theme.ririsharp.nl/'
 
 # Taxonomy terms
 tags = ['blog', 'math', 'dark']
