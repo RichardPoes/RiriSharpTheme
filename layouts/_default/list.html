@@ -12,7 +12,7 @@
           {{ with .Resources.Get $path }}
           <img src="{{ .RelPermalink }}" class="img-fluid p-2 my-auto" alt="cover image">
           {{ else }}
-          <img src="/images/fallback.jpg" class="img-fluid p-2 my-auto" alt="placeholder">
+          <img src="/images/fallback.svg" class="img-fluid p-2 my-auto" alt="placeholder">
           {{ end }}
         </div>
       </div>
@@ -21,7 +21,7 @@
       <div class="d-flex flex-column justify-content-between h-100">
         <div>
           <h2>{{ .LinkTitle }}</h2>
-          <div>{{ .Summary | strings.Truncate 500 }}</div>
+          <div>{{ .Summary }}</div>
         </div>
         <div class="d-flex justify-content-end">
           <a href="{{ .RelPermalink }}" class="stretched-link">Click to read full post</a>

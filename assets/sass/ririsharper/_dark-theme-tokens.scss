@@ -10,14 +10,14 @@ $dark-theme-purple: $richard-purple-500;
 $dark-theme-red-rgb: to-rgb($dark-theme-red);
 
 // Then some more generic variables
-$dark-theme-tertiary-bg-rgb: to-rgb($richard-grey-900);
+$dark-theme-tertiary-bg-rgb: to-rgb($richard-grey-800);
 
 // Body
-$dark-theme-body-bg: $richard-grey-1000;
-$dark-theme-body-color: $richard-grey-300;
+$dark-theme-body-bg: $richard-grey-900;
+$dark-theme-body-color: $richard-grey-200;
 
 $dark-theme-bg-primary: $dark-theme-red;
-$dark-theme-bg-primary-text-color: $richard-grey-1000;
+$dark-theme-bg-primary-text-color: $richard-grey-900;
 
 // Links
 $dark-theme-link-color-rgb: $dark-theme-red-rgb;
@@ -25,13 +25,13 @@ $dark-theme-link-hover-color-rgb: to-rgb($richard-red-500);
 
 // Dropdown
 $dark-theme-dropdown-link-active-bg: $dark-theme-red;
-$dark-theme-dropdown-link-active-color: $richard-grey-100;
+$dark-theme-dropdown-link-active-color: $white;
 
 // Logo
-$dark-theme-logo-fill: $richard-grey-1100;
+$dark-theme-logo-fill: $black;
 
 // Navbar
-$dark-theme-navbar-active-color: $richard-grey-1100;
-$dark-theme-nav-link-color: $richard-grey-1100;
-$dark-theme-navbar-toggler-color: $richard-grey-1100;
-$dark-theme-navbar-toggler-focus-color : $richard-grey-100;
+$dark-theme-navbar-active-color: $black;
+$dark-theme-nav-link-color: $black;
+$dark-theme-navbar-toggler-color: $black;
+$dark-theme-navbar-toggler-focus-color : $white;

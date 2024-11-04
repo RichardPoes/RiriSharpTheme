@@ -26,7 +26,7 @@ hugo server
 Configuration should be rather simple and straightforward.
 
 ### Global configuration
-The global configuration can be found in (hugo.toml)[./hugo.toml].
+The global configuration can be found in [theme.toml](theme.toml).
 Most things are rather straightforward.
 The section
 ```toml
@@ -37,7 +37,22 @@ email = "john.doe@example.com"
 will make sure the author name and their gravatar is being shown on the about page.
 
 ### Post configuration
-As of right now posts do not have any special kind of configuration keys.
+This is how you structure your files if you want a post with a cover image.
+```bash
+cd content/posts
+mkdir a-new-post
+cd a-new-post
+touch index.md
+touch cover.svg
+```
+Let us now elaborate on this a bit further.
+
+To have a custom post cover image, create a folder inside the folder [content/posts](content/posts/).
+Apart from an `index.md` file, which will be your post, we want to add a cover image. 
+All image formats which are supported by the HTML `<img>` tag, are supported.
+More info about what types are supported can be found on [the mdn web docs page](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types), for example.
+The most important thing is that you name your file `cover.[ext]`, where `[ext]` is the file extension of your choosing. 
+
 
 ## Attributions
 - The font [Quicksand](https://www.dafont.com/quicksand.font) by [Andrew Paglinawan](https://www.dafont.com/andrew-paglinawan.d3799) has been used. 

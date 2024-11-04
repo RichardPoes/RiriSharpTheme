@@ -1,12 +1,18 @@
 {{ define "main" }}
-<div class="container-xxl">
-  <h1>{{ .Title }}</h1>
-
+<div class="container-title pb-2">
+  <div class="row">
+    <h1>{{ .Title }}</h1>
+  </div>
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
   <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  <div class="row">
+    <h4 class="text-primary"><strong>{{ .Summary }}</strong></h4>
+  </div>
 
+</div>
+<div class="container-text">
   {{ .Content }}
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-  </div>
+</div>
 {{ end }}

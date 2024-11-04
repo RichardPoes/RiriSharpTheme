@@ -1,6 +1,7 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-US'
 title = 'RiRiSharp Hugo Template Site'
+summaryLength = 40
 
 [author]
 name = "John Doe"

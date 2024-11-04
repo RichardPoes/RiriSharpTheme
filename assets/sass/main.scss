@@ -11,6 +11,23 @@
 
 // Rest of the code goes here
 @import 'ririsharper/fonts';
+
+.container-text {
+    @include make-container();
+    @media(min-width: 768px) {
+        max-width: 720px;
+    }
+    width: 100%;
+}
+
+.container-title {
+    @include make-container();
+    @media(min-width: 992px) {
+        max-width: 960px;
+    }
+    width: 100%;
+}
+
 .navbar-toggler {
     border: none;
 }

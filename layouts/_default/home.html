@@ -7,11 +7,10 @@
     <div class="col-12 col-lg-3">
       <div class="h-100">
         <div class="ratio ratio-1x1">
-          {{ $path := "cover.jpg" }}
-          {{ with .Resources.Get $path }}
+          {{ with index (.Resources.Match "cover.*") 0 }}
             <img src="{{ .RelPermalink }}" class="img-fluid p-2 my-auto" alt="cover image">
           {{ else }}
-            <img src="/images/fallback.jpg" class="img-fluid p-2 my-auto" alt="placeholder">
+            <img src="/images/fallback.svg" class="img-fluid p-2 my-auto" alt="placeholder">
           {{ end }}
         </div>
       </div>

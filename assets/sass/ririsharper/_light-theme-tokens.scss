@@ -11,23 +11,23 @@ $light-theme-purple: $richard-purple-500;
 $light-theme-red-rgb: to-rgb($light-theme-red);
 
 // Then some more generic variables
-$light-theme-tertiary-bg-rgb: to-rgb($richard-grey-200);
+$light-theme-tertiary-bg-rgb: to-rgb($richard-grey-100);
 
 // Body
-$light-theme-body-bg: $richard-grey-100;
+$light-theme-body-bg: $white;
 
 // Links
 
 // Dropdown
 $light-theme-link-hover-color-rgb: to-rgb($richard-red-500);
 $light-theme-dropdown-link-active-bg: $light-theme-red;
-$light-theme-dropdown-link-active-color: $richard-grey-100;
+$light-theme-dropdown-link-active-color: $white;
 
 // Logo
-$light-theme-logo-fill: $richard-grey-100;
+$light-theme-logo-fill: $white;
 
 // Navbar
-$light-theme-navbar-active-color: $richard-grey-100;
-$light-theme-nav-link-color: $richard-grey-100;
-$light-theme-navbar-toggler-color: $richard-grey-100;
-$light-theme-navbar-toggler-focus-color : $richard-grey-100;
+$light-theme-navbar-active-color: $white;
+$light-theme-nav-link-color: $white;
+$light-theme-navbar-toggler-color: $white;
+$light-theme-navbar-toggler-focus-color : $white;
