@@ -3,9 +3,9 @@ languageCode = 'en-US'
 title = 'RiRiSharp Hugo Template Site'
 summaryLength = 40
 
-[author]
-name = "John Doe"
-email = "john.doe@example.com"
+[taxonomies]
+	tag = "tags"
+	author = "authors"
 
 [[menus.main]]
 name = 'Home'
@@ -13,19 +13,14 @@ pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
+name = 'Tags'
+pageRef = '/tags'
 weight = 20
 
 [[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
+name = 'Authors'
+pageRef = '/authors'
 weight = 30
-
-[[menus.main]]
-name = 'About'
-pageRef = '/about'
-weight = 40
 
 [module]
   [module.hugoVersion]

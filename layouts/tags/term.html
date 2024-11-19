@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="container-xxl pt-2">
+    <h1><span class="badge rounded-pill text-bg-secondary">{{ .Title }}</span></h1>
+    {{ .Content }}
+</div>
+{{ partial "post-list.html" . }}
+{{ end}}

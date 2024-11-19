@@ -40,10 +40,13 @@ Renders a menu for the given menu ID.
 {{- $page := .page }}
 {{- range .menuEntries }}
 {{- $attrs := dict "href" .URL "class" "nav-link" }}
-{{- if $page.IsMenuCurrent .Menu . }}
+{{- $isActive := or 
+  ($page.IsMenuCurrent .Menu .) 
+  ($page.HasMenuCurrent .Menu .) 
+  (and (ne .URL "/") (strings.HasPrefix $page.RelPermalink .URL)) 
+}}
+{{- if $isActive }}
 {{- $attrs = merge $attrs (dict "class" "nav-link active" "aria-current" "page") }}
-{{- else if $page.HasMenuCurrent .Menu .}}
-{{- $attrs = merge $attrs (dict "class" "nav-link ancestor" "aria-current" "true") }}
 {{- end }}
 {{- $name := .Name }}
 {{- with .Identifier }}
@@ -51,6 +54,7 @@ Renders a menu for the given menu ID.
 {{- $name = . }}
 {{- end }}
 {{- end }}
+
 <li class="nav-item">
   <a {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k $v | safeHTMLAttr }} {{- end }} {{- end -}}>{{ $name }}</a>
   {{- with .Children }}

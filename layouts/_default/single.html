@@ -5,11 +5,30 @@
   </div>
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
   <div class="row">
-    <h4 class="text-primary"><strong>{{ .Summary }}</strong></h4>
+    <h4 class="text-primary mb-0"><strong>{{ .Summary }}</strong></h4>
   </div>
+  <div class="row">
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  </div>
+  {{ range .Param "authors" }}
+  {{ $name := . }}
+  {{ $path := printf "/%s/%s" "authors" ($name | urlize) }}
+  {{ with $.Site.GetPage $path }}
+  <div class="row pt-1">
+    <div class="col-auto pe-0">
+      <img src="https://www.gravatar.com/avatar/{{ .Params.email | md5 }}?s=30&d=mp" class="rounded-circle img-fluid" alt="Gravatar of {{ $name }}">
+    </div>
+    <div class="col">
+      <a class="d-inline align-middle text-body" href="{{ $path }}">{{ $name }}</a>
+    </div>
+  </div>
+  {{ end }}
+  {{ end }}
+  <span>
 
+  </span>
+</div>
 </div>
 <div class="container-text">
   {{ .Content }}
