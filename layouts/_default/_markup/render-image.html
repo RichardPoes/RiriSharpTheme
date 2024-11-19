@@ -1,9 +1,11 @@
 {{/* Thanks to https://sebastiandedeyne.com/captioned-images-with-markdown-render-hooks-in-hugo/ */}}
-{{ if .Title }}
-  <figure>
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
-    <figcaption>{{ .Title }}</figcaption>
+<div class="w-100 text-center">
+  {{ if .Text }}
+  <figure class="figure" id="id-{{ .Destination | crypto.FNV32a }}">
+    <img class="figure-img img-fluid rounded" src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+    <figcaption class="figure-caption"><b class="pre-description">Image <span class="counter">{{ .Ordinal | math.Add 1 }}</span></b>: {{ .Text }}</figcaption>
   </figure>
-{{ else }}
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
-{{ end }}
+  {{ else }}
+  <img class="rounded mx-auto d-block pb-2" src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+  {{ end }}
+</div>

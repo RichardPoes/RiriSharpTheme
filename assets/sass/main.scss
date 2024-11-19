@@ -66,6 +66,10 @@ a {
     text-decoration: none;
 }
 
-[class*=" border-hover-"] a:hover {
+a:hover {
     text-decoration: underline;
+}
+
+a .badge:hover{
+    text-decoration: none;
 }

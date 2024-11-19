@@ -10,6 +10,24 @@ I have tried to leave as much functionality the same, while offering a unique st
 - Minimal usage of javascript (frameworks)
 - About page with usage of [Gravatar](https://gravatar.com/)
 - Posts with cover images and fallback
+- Images with captions and reference possibilities
+
+### Image captioning & referencing
+All images will automatically be captioned.
+For instance, when we write this:
+```markdown
+![Bryce Canyon National Park](bryce-canyon.jpg)
+```
+An image will be created with the caption "Bryce Canyon National Park", the same as its alt-text.
+Automatic numbering will also be applied.
+We can then reference this image by doing either of these things:
+```
+{{< cref-img bryce-canyon.jpg >}}
+{{< cref-img bryce-canyon.jpg "this image" >}}
+```
+The first option will reference to this image by "image `<imgNo>`", where `<imgNo>` will be the correct image number.
+The latter option will override this with the text provided.
+Of course, both reference are clickable.
 
 ## Installation
 Installation is simple and just like Ananke:

@@ -1,12 +1,22 @@
 {{- with resources.Get "js/color-mode-toggler.js" }}
   {{- if hugo.IsProduction }}
-    {{- $opts := dict "minify" true }}
-    {{- with . | js.Build $opts }}
-      <script src="{{ .RelPermalink }}"></script>
+    {{- with . | js.Build | minify | fingerprint }}
+      <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
     {{- end }}
   {{- else }}
-    {{- with . | js.Build | fingerprint }}
+    {{- with . | js.Build }}
+      <script src="{{ .RelPermalink }}"></script>
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- with resources.Get "js/main.js" }}
+  {{- if hugo.IsProduction }}
+    {{- with . | js.Build | minify | fingerprint }}
       <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- end }}
+  {{- else }}
+    {{- with . | js.Build }}
+      <script src="{{ .RelPermalink }}"></script>
     {{- end }}
   {{- end }}
 {{- end }}
