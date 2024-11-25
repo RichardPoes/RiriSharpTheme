@@ -109,3 +109,13 @@ a .badge:hover{
 .text-tertiary {
     color: $tertiary;
 }
+
+.post-banner-image {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.post-banner-image img {
+    max-height: $ririsharp-post-banner-max-image-height;
+    height: auto;
+}

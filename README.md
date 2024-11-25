@@ -9,7 +9,8 @@ I have tried to leave as much functionality the same, while offering a unique st
 - Usage of Bootstrap
 - Minimal usage of javascript (frameworks)
 - About page with usage of [Gravatar](https://gravatar.com/)
-- Posts with cover images and fallback
+- Posts with cover images with fallback
+- Post with banner images with double fallback
 - Images with captions and reference possibilities
 - Multi author support
 

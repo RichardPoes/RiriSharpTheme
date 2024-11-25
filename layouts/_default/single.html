@@ -25,12 +25,20 @@
   </div>
   {{ end }}
   {{ end }}
-  <span>
+</div>
 
-  </span>
-</div>
-</div>
 <div class="container-text">
+  <div class="post-banner-image">
+    {{ with index (.Resources.Match "banner.*") 0 }}
+    <figure class="figure">
+      {{ partial "image.html" (dict "Src" .RelPermalink "alt" "banner image of post") }}
+    </figure>
+    {{ else with index (.Resources.Match "cover.*") 0 }}
+    <figure class="figure">
+      {{ partial "image.html" (dict "Src" .RelPermalink "alt" "banner image of post") }}
+    </figure>
+    {{ end }}
+  </div>
   {{ .Content }}
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 </div>

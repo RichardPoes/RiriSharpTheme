@@ -4,13 +4,13 @@
         <div class="row">
             <div class="col-12 col-sm-3">
                 <div class="h-100 d-flex flex-column justify-content-center">
-                    <div class="ratio ratio-1x1">
+                    <figure class="figure">
                         {{ with index (.Resources.Match "cover.*") 0 }}
-                        <img src="{{ .RelPermalink }}" class="img-fluid p-2 my-auto" alt="cover image">
+                        {{ partial "image.html" (dict "Src" .RelPermalink "alt" "cover image for post") }}
                         {{ else }}
-                        <img src="/images/fallback.svg" class="img-fluid p-2 my-auto" alt="placeholder">
+                        {{ partial "image.html" (dict "Src" "/images/fallback.svg" "alt" "placeholder image for post") }}
                         {{ end }}
-                    </div>
+                    </figure>
                 </div>
             </div>
             <div class="col-12 col-sm-9">
