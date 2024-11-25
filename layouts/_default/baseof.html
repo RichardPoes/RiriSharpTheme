@@ -5,7 +5,7 @@
 </head>
 <body>
   <header class="pb-2">
-    {{ partial "header.html" . }}
+    {{ partial "navbar.html" (dict "menuID" "main" "page" .) }}
   </header>
   <main>
     {{ block "main" . }}{{ end }}
