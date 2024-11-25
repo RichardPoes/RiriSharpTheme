@@ -2,33 +2,33 @@
 @import 'colors';
 
 // Some reusable variables first.
-$light-theme-red: $richard-red-500;
-$light-theme-blue: $richard-blue-500;
-$light-theme-yellow: $richard-yellow-500;
-$light-theme-green: $richard-green-500;
-$light-theme-purple: $richard-purple-500;
+$ririsharp-light-red: $ririsharp-red-500;
+$ririsharp-light-blue: $ririsharp-blue-500;
+$ririsharp-light-yellow: $ririsharp-yellow-500;
+$ririsharp-light-green: $ririsharp-green-500;
+$ririsharp-light-purple: $ririsharp-purple-500;
 
-$light-theme-red-rgb: to-rgb($light-theme-red);
+$ririsharp-light-red-rgb: to-rgb($ririsharp-light-red);
 
 // Then some more generic variables
-$light-theme-tertiary-bg-rgb: to-rgb($richard-grey-100);
+$ririsharp-light-tertiary-bg-rgb: to-rgb($ririsharp-grey-100);
 
 // Body
-$light-theme-body-bg: $white;
+$ririsharp-light-body-bg: $white;
 
 // Links
-$light-theme-image-link-color: $light-theme-red;
+$ririsharp-light-image-link-color: $ririsharp-light-red;
 
 // Dropdown
-$light-theme-link-hover-color-rgb: to-rgb($richard-red-500);
-$light-theme-dropdown-link-active-bg: $light-theme-red;
-$light-theme-dropdown-link-active-color: $white;
+$ririsharp-light-link-hover-color-rgb: to-rgb($ririsharp-red-500);
+$ririsharp-light-dropdown-link-active-bg: $ririsharp-light-red;
+$ririsharp-light-dropdown-link-active-color: $white;
 
 // Logo
-$light-theme-logo-fill: $white;
+$ririsharp-light-logo-fill: $white;
 
 // Navbar
-$light-theme-navbar-active-color: $white;
-$light-theme-nav-link-color: $white;
-$light-theme-navbar-toggler-color: $white;
-$light-theme-navbar-toggler-focus-color : $white;
+$ririsharp-light-navbar-active-color: $white;
+$ririsharp-light-nav-link-color: $white;
+$ririsharp-light-navbar-toggler-color: $white;
+$ririsharp-light-navbar-toggler-focus-color : $white;

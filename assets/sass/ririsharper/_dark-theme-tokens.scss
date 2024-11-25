@@ -1,38 +1,38 @@
 @import 'colors';
 
 // Some reusable variables first.
-$dark-theme-red: $richard-red-500;
-$dark-theme-blue: $richard-blue-500;
-$dark-theme-yellow: $richard-yellow-500;
-$dark-theme-green: $richard-green-500;
-$dark-theme-purple: $richard-purple-500;
+$ririsharp-dark-red: $ririsharp-red-500;
+$ririsharp-dark-blue: $ririsharp-blue-500;
+$ririsharp-dark-yellow: $ririsharp-yellow-500;
+$ririsharp-dark-green: $ririsharp-green-500;
+$ririsharp-dark-purple: $ririsharp-purple-500;
 
-$dark-theme-red-rgb: to-rgb($dark-theme-red);
+$ririsharp-dark-red-rgb: to-rgb($ririsharp-dark-red);
 
 // Then some more generic variables
-$dark-theme-tertiary-bg-rgb: to-rgb($richard-grey-800);
+$ririsharp-dark-tertiary-bg-rgb: to-rgb($ririsharp-grey-800);
 
 // Body
-$dark-theme-body-bg: $richard-grey-900;
-$dark-theme-body-color: $richard-grey-200;
+$ririsharp-dark-body-bg: $ririsharp-grey-900;
+$ririsharp-dark-body-color: $ririsharp-grey-200;
 
-$dark-theme-bg-primary: $dark-theme-red;
-$dark-theme-bg-primary-text-color: $richard-grey-900;
+$ririsharp-dark-bg-primary: $ririsharp-dark-red;
+$ririsharp-dark-bg-primary-text-color: $ririsharp-grey-900;
 
 // Links
-$dark-theme-link-color-rgb: $dark-theme-red-rgb;
-$dark-theme-link-hover-color-rgb: to-rgb($richard-red-500);
-$dark-theme-image-link-color: $dark-theme-red;
+$ririsharp-dark-link-color-rgb: $ririsharp-dark-red-rgb;
+$ririsharp-dark-link-hover-color-rgb: to-rgb($ririsharp-red-500);
+$ririsharp-dark-image-link-color: $ririsharp-dark-red;
 
 // Dropdown
-$dark-theme-dropdown-link-active-bg: $dark-theme-red;
-$dark-theme-dropdown-link-active-color: $black;
+$ririsharp-dark-dropdown-link-active-bg: $ririsharp-dark-red;
+$ririsharp-dark-dropdown-link-active-color: $black;
 
 // Logo
-$dark-theme-logo-fill: $black;
+$ririsharp-dark-logo-fill: $black;
 
 // Navbar
-$dark-theme-navbar-active-color: $black;
-$dark-theme-nav-link-color: $black;
-$dark-theme-navbar-toggler-color: $black;
-$dark-theme-navbar-toggler-focus-color : $white;
+$ririsharp-dark-navbar-active-color: $black;
+$ririsharp-dark-nav-link-color: $black;
+$ririsharp-dark-navbar-toggler-color: $black;
+$ririsharp-dark-navbar-toggler-focus-color : $white;

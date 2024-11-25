@@ -2,39 +2,39 @@
 
 
 [data-bs-theme="dark"] {
-    --bs-body-bg: #{$dark-theme-body-bg};
-    --bs-body-color: #{$dark-theme-body-color};
-    --bs-tertiary-bg-rgb: #{$dark-theme-tertiary-bg-rgb};
+    --bs-body-bg: #{$ririsharp-dark-body-bg};
+    --bs-body-color: #{$ririsharp-dark-body-color};
+    --bs-tertiary-bg-rgb: #{$ririsharp-dark-tertiary-bg-rgb};
 
-    --bs-link-color-rgb: #{$dark-theme-link-color-rgb};
-    --bs-link-hover-color-rgb: #{$dark-theme-link-hover-color-rgb};
+    --bs-link-color-rgb: #{$ririsharp-dark-link-color-rgb};
+    --bs-link-hover-color-rgb: #{$ririsharp-dark-link-hover-color-rgb};
 
     .dropdown-menu {
-        --bs-dropdown-link-active-bg: #{$dark-theme-dropdown-link-active-bg};
-        --bs-dropdown-link-active-color: #{$dark-theme-dropdown-link-active-color};
+        --bs-dropdown-link-active-bg: #{$ririsharp-dark-dropdown-link-active-bg};
+        --bs-dropdown-link-active-color: #{$ririsharp-dark-dropdown-link-active-color};
     }
 
     .navbar-brand svg path {
-        fill: $dark-theme-logo-fill;
+        fill: $ririsharp-dark-logo-fill;
     }
 
     .navbar-toggler .navbar-toggler-span svg path{
-        stroke: $dark-theme-navbar-toggler-color;
+        stroke: $ririsharp-dark-navbar-toggler-color;
     }
 
     .navbar-toggler:focus .navbar-toggler-span svg path{
-        stroke: $dark-theme-navbar-toggler-focus-color;
+        stroke: $ririsharp-dark-navbar-toggler-focus-color;
     }
 
     .nav-link {
-        color: $dark-theme-nav-link-color;
+        color: $ririsharp-dark-nav-link-color;
     }
 
     .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-        color: $dark-theme-navbar-active-color
+        color: $ririsharp-dark-navbar-active-color
     }
 
     .image-link-color {
-        color: $dark-theme-image-link-color;
+        color: $ririsharp-dark-image-link-color;
     }
 }
