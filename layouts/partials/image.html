@@ -1,1 +1,1 @@
-<img class="figure-img img-fluid rounded" src="{{ .Src }}" alt="{{ .Alt }}">
+<img class="figure-img img-fluid rounded {{ with .Classes }}{{ . }}{{ end }}" src="{{ .Src }}" alt="{{ .Alt }}">
