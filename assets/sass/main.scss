@@ -5,117 +5,15 @@
 // Then we inject bootstrap
 @import "bootstrap-5.3.3/bootstrap";
 
-// Now we overwrite bootstrap dark theme variables
-@import "bootstrap-light-theme-overrides";
-@import "bootstrap-dark-theme-overrides";
+// Now we overwrite bootstrap theme variables
+@import "bootstrap-theming-overrides";
 
 // Rest of the code goes here
 @import 'ririsharper/fonts';
 
-.container-text {
-    @include make-container();
-    @media(min-width: 768px) {
-        max-width: 720px;
-    }
-    width: 100%;
-}
+@import 'ririsharper/containers';
+@import 'ririsharper/navbar';
 
-.container-title {
-    @include make-container();
-    @media(min-width: 992px) {
-        max-width: 960px;
-    }
-    width: 100%;
-}
-
-.navbar-toggler {
-    border: none;
-}
-.navbar-toggler:focus {
-    box-shadow: none;
-}
-.navbar-toggler-span {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    background-size: 100%;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-}
-
-.navbar-nav .nav-link.active {
-    text-decoration: underline;
-}
-
-.border.border-hover-primary:hover {
-    border-color: $primary !important;
-}
-
-.border.border-hover-secondary:hover {
-    border-color: $secondary !important;
-}
-
-.border.border-hover-tertiary:hover {
-    border-color: $tertiary !important;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a .badge:hover{
-    text-decoration: none;
-}
-
-.title-lines {
-    overflow: hidden;
-    text-align: center;
-}
-
-.title-lines::before,
-.title-lines::after {
-  background-color: $primary;
-  content: "";
-  display: inline-block;
-  height: 1px;
-  position: relative;
-  vertical-align: middle;
-  width: 50%;
-}
-
-.title-lines::before {
-  right: 0.5em;
-  margin-left: -50%;
-}
-
-.title-lines::after {
-  left: 0.5em;
-  margin-right: -50%;
-}
-
-.icon-link {
-    align-items: baseline;
-    gap: $ririsharp-icon-link-gap;
-    padding-left: $ririsharp-icon-link-padding-start;
-}
-
-.text-tertiary {
-    color: $tertiary;
-}
-
-.post-banner-image {
-    text-align: center;
-    padding-top: 1em;
-}
-
-.post-banner-image img {
-    max-height: $ririsharp-post-banner-max-image-height;
-    height: auto;
-}
+@import 'ririsharper/headings';
+@import 'ririsharper/links';
+@import 'ririsharper/images';

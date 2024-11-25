@@ -1,0 +1,11 @@
+@import 'tokens/other-tokens';
+
+.post-banner-image {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.post-banner-image img {
+    max-height: $ririsharp-post-banner-max-image-height;
+    height: auto;
+}

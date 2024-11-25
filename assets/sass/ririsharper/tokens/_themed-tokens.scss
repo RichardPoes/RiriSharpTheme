@@ -1,0 +1,50 @@
+@import 'colors';
+
+$themes: (
+    light: (
+        red: $ririsharp-red-500,
+        blue: $ririsharp-blue-500,
+        yellow: $ririsharp-yellow-500,
+        green: $ririsharp-green-600,
+        purple: $ririsharp-purple-600,
+        red-rgb: to-rgb($ririsharp-red-500),
+        tertiary-bg-rgb: to-rgb($ririsharp-grey-100),
+        body-bg: $white,
+        body-color: $black,
+        bg-primary: $ririsharp-red-500,
+        bg-primary-text-color: $white,
+        link-color-rgb: to-rgb($ririsharp-red-500),
+        link-hover-color-rgb: to-rgb($ririsharp-red-500),
+        image-link-color: $ririsharp-red-500,
+        dropdown-link-active-bg: $ririsharp-red-500,
+        dropdown-link-active-color: $white,
+        logo-fill: $white,
+        navbar-active-color: $white,
+        nav-link-color: $white,
+        navbar-toggler-color: $white,
+        navbar-toggler-focus-color: $white
+    ),
+    dark: (
+        red: $ririsharp-red-500,
+        blue: $ririsharp-blue-500,
+        yellow: $ririsharp-yellow-500,
+        green: $ririsharp-green-600,
+        purple: $ririsharp-purple-600,
+        red-rgb: to-rgb($ririsharp-red-500),
+        tertiary-bg-rgb: to-rgb($ririsharp-grey-200),
+        body-bg: $ririsharp-grey-900,
+        body-color: $ririsharp-grey-200,
+        bg-primary: $ririsharp-red-500,
+        bg-primary-text-color: $ririsharp-grey-900,
+        link-color-rgb: to-rgb($ririsharp-red-500),
+        link-hover-color-rgb: to-rgb($ririsharp-red-500),
+        image-link-color: $ririsharp-red-500,
+        dropdown-link-active-bg: $ririsharp-red-500,
+        dropdown-link-active-color: $black,
+        logo-fill: $black,
+        navbar-active-color: $black,
+        nav-link-color: $black,
+        navbar-toggler-color: $black,
+        navbar-toggler-focus-color: $white
+    )
+);
