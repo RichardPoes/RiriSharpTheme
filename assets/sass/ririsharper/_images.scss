@@ -9,3 +9,8 @@
     max-height: $ririsharp-post-banner-max-image-height;
     height: auto;
 }
+
+figure:not(:has(figcaption)) {
+    margin-bottom: 0;
+    text-align: center;
+}
