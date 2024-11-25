@@ -1,28 +1,31 @@
 <div class="container-xxl pt-2">
     {{ range . }}
-    <div class="row my-4 mx-2 mx-lg-0 p-2 border rounded border-2 position-relative border-hover-tertiary">
-        <div class="col-12 col-lg-3">
-            <div class="h-100">
-                <div class="ratio ratio-1x1">
-                    {{ with index (.Resources.Match "cover.*") 0 }}
-                    <img src="{{ .RelPermalink }}" class="img-fluid p-2 my-auto" alt="cover image">
-                    {{ else }}
-                    <img src="/images/fallback.svg" class="img-fluid p-2 my-auto" alt="placeholder">
-                    {{ end }}
+    <div class="position-relative my-4 mx-2 mx-lg-0 p-2 border rounded border-2 border-hover-tertiary">
+        <div class="row">
+            <div class="col-12 col-sm-3">
+                <div class="h-100 d-flex flex-column justify-content-center">
+                    <div class="ratio ratio-1x1">
+                        {{ with index (.Resources.Match "cover.*") 0 }}
+                        <img src="{{ .RelPermalink }}" class="img-fluid p-2 my-auto" alt="cover image">
+                        {{ else }}
+                        <img src="/images/fallback.svg" class="img-fluid p-2 my-auto" alt="placeholder">
+                        {{ end }}
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-lg-9">
-            <div class="d-flex flex-column justify-content-between h-100">
-                <div>
-                    <h2>{{ .LinkTitle }}</h2>
-                    <div>{{ .Summary | strings.Truncate 500 }}</div>
-                </div>
-                <div class="d-flex justify-content-end">
-                    <a href="{{ .RelPermalink }}" class="stretched-link">Click to read full post</a>
+            <div class="col-12 col-sm-9">
+                <div class="d-flex flex-column justify-content-between h-100">
+                    <div>
+                        <h2>{{ .LinkTitle }}</h2>
+                        <div>{{ .Summary | strings.Truncate 500 }}</div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <a href="{{ .RelPermalink }}" class="stretched-link">Click to read full post</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     {{ end }}
 </div>
+<!-- d-flex flex-column justify-content-center -->
