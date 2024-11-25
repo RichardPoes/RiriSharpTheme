@@ -29,4 +29,8 @@
         --bs-dropdown-link-active-bg: #{$light-theme-dropdown-link-active-bg};
         --bs-dropdown-link-active-color: #{$light-theme-dropdown-link-active-color};
     }
+
+    .image-link-color {
+        color: $light-theme-image-link-color;
+    }
 }

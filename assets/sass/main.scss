@@ -99,3 +99,13 @@ a .badge:hover{
   left: 0.5em;
   margin-right: -50%;
 }
+
+.icon-link {
+    align-items: baseline;
+    gap: $richard-icon-link-gap;
+    padding-left: $richard-icon-link-padding-start;
+}
+
+.text-tertiary {
+    color: $tertiary;
+}

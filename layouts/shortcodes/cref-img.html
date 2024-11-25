@@ -1,4 +1,5 @@
-<a href="#id-{{index .Params 0 | crypto.FNV32a }}">
+<a class="icon-link image-link-color" href="#id-{{index .Params 0 | crypto.FNV32a }}">
+    <i class="bi bi-image"></i>
     {{ if (isset .Params 1) }}
     {{ index .Params 1 }}
     {{ else }}
