@@ -1,6 +1,7 @@
 {{ define "main" }}
 <div class="container-xxl pt-2">
   {{ .Content }}
+</div>
   {{ $postPages := where .Site.RegularPages "Section" "eq" "posts" }}
   {{ partial "post-list.html" $postPages }}
 </div>
