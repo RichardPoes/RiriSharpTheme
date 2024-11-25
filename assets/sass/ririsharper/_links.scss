@@ -35,8 +35,12 @@ a {
 
 @each $theme, $properties in $themes {
     [data-bs-theme="#{$theme}"] {
-        .image-link-color {
-            color: map-get($properties, image-link-color);
+        .image-ref-color {
+            color: map-get($properties, image-ref-color);
+        }
+
+        .eq-ref-color {
+            color: map-get($properties, eq-ref-color);
         }
     }
 }

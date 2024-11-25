@@ -3,16 +3,16 @@
 {{ $sass := resources.Get "sass/main.scss" }}
 {{ $style := $sass | css.Sass | minify }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ $ririIcons := resources.Get "css/ririsharp-icons.css" | minify }}
+<link rel="stylesheet" href="{{ $ririIcons.Permalink }}">
 {{ $icons := resources.Get "css/bootstrap-icons.min.css" }}
-{{ $iconStyle := $icons }}
-<link rel="stylesheet" href="{{ $iconStyle.Permalink }}">
+<link rel="stylesheet" href="{{ $icons.Permalink }}">
 
 {{ else }}
 
 {{ $sass := resources.Get "sass/main.scss" }}
 {{ $style := $sass | css.Sass | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
-{{ $icons := resources.Get "css/bootstrap-icons.min.css" }}
-{{ $iconStyle := $icons | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $iconStyle.Permalink }}" integrity="{{ $iconStyle.Data.Integrity }}">
+{{ $icons := resources.Get "css/bootstrap-icons.min.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $icons.Permalink }}" integrity="{{ $icons.Data.Integrity }}">
 {{ end }}

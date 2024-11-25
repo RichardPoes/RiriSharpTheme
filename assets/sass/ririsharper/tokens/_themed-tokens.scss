@@ -15,14 +15,16 @@ $themes: (
         bg-primary-text-color: $white,
         link-color-rgb: to-rgb($ririsharp-red-500),
         link-hover-color-rgb: to-rgb($ririsharp-red-500),
-        image-link-color: $ririsharp-red-500,
         dropdown-link-active-bg: $ririsharp-red-500,
         dropdown-link-active-color: $white,
         logo-fill: $white,
         navbar-active-color: $white,
         nav-link-color: $white,
         navbar-toggler-color: $white,
-        navbar-toggler-focus-color: $white
+        navbar-toggler-focus-color: $white,
+        caption-color: $ririsharp-grey-800,
+        image-ref-color: $ririsharp-red-500,
+        eq-ref-color: $ririsharp-blue-500,
     ),
     dark: (
         red: $ririsharp-red-500,
@@ -38,13 +40,15 @@ $themes: (
         bg-primary-text-color: $ririsharp-grey-900,
         link-color-rgb: to-rgb($ririsharp-red-500),
         link-hover-color-rgb: to-rgb($ririsharp-red-500),
-        image-link-color: $ririsharp-red-500,
         dropdown-link-active-bg: $ririsharp-red-500,
         dropdown-link-active-color: $black,
         logo-fill: $black,
         navbar-active-color: $black,
         nav-link-color: $black,
         navbar-toggler-color: $black,
-        navbar-toggler-focus-color: $white
+        navbar-toggler-focus-color: $white,
+        caption-color: $ririsharp-grey-300,
+        image-ref-color: $ririsharp-red-500,
+        eq-ref-color: $ririsharp-blue-200,
     )
 );

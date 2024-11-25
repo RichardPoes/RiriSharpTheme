@@ -20,6 +20,10 @@ Amet eu cillum ut reprehenderit culpa aliquip labore laborum amet sit sit duis.
 Laborum id proident nostrud dolore laborum reprehenderit quis mollit nulla amet veniam officia id id.
 Aliquip in deserunt qui magna duis qui pariatur officia sunt deserunt.
 
+{{< math "eq:pi" >}}
+4\sum_{k=0}^\infty \frac{(-1)^k}{2k+1} = \pi
+{{< /math >}}
+
 Donec imperdiet commodo velit.
 Curabitur posuere urna orci, sit amet tempor quam dictum fermentum.
 Morbi dictum orci ut vestibulum tristique.
@@ -27,6 +31,10 @@ Cras pulvinar lectus ac ante vestibulum mollis.
 Etiam ac metus eu felis placerat rhoncus.
 Curabitur eu sem rutrum, pulvinar nibh sit amet, efficitur erat.
 Fusce vel pretium felis.
+
+{{< math "eq:gauss" "The Gaussian integral" >}}
+\int_{-\infty}^{\infty}\mathrm{e}^{-x^2}\mathrm{d}x = \sqrt{2\pi}
+{{< /math >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Vivamus condimentum viverra purus, in vehicula lorem condimentum in.
@@ -92,3 +100,5 @@ Maecenas porta eros leo, eu pellentesque augue sollicitudin ut.
 Donec vitae ligula quis est mollis laoreet.
 
 We can now reference to {{< cref-img bryce-canyon.jpg "this image" >}} by giving it our own name, or we simply refer to it as {{< cref-img bryce-canyon.jpg >}}.
+Moreover, we saw a definition for \(\pi\) in {{< cref-eq "eq:pi">}}. 
+In {{< cref-eq bryce-canyon.jpg "the other equation" >}} we saw \(\pi\) come up again.

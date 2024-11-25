@@ -1,4 +1,5 @@
 @import 'tokens/other-tokens';
+@import 'tokens/themed-tokens';
 
 .post-banner-image {
     text-align: center;
@@ -13,4 +14,13 @@
 figure:not(:has(figcaption)) {
     margin-bottom: 0;
     text-align: center;
+}
+
+@each $theme, $properties in $themes {
+    [data-bs-theme="#{$theme}"] {
+        .figure-caption {
+            color: map-get($properties, caption-color);
+            font-size: $ririsharp-caption-font-size;
+        }
+    }
 }

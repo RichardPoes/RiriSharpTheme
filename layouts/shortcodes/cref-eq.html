@@ -1,0 +1,8 @@
+<a class="icon-link eq-ref-color" href="#id-{{index .Params 0 | crypto.FNV32a }}">
+    <i class="ri ri-fx"></i>
+    {{ if (isset .Params 1) }}
+    {{ index .Params 1 }}
+    {{ else }}
+    equation <span data-rst-counter-id="id-{{index .Params 0 | crypto.FNV32a }}"></span>
+    {{ end }}
+</a>
