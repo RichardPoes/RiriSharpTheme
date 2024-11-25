@@ -44,6 +44,7 @@ Renders a menu for the given menu ID.
   ($page.IsMenuCurrent .Menu .) 
   ($page.HasMenuCurrent .Menu .) 
   (and (ne .URL "/") (strings.HasPrefix $page.RelPermalink .URL)) 
+  (and (eq .URL "/") (strings.HasPrefix $page.RelPermalink "/posts/"))
 }}
 {{- if $isActive }}
 {{- $attrs = merge $attrs (dict "class" "nav-link active" "aria-current" "page") }}

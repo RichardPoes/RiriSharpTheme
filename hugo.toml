@@ -8,7 +8,7 @@ summaryLength = 40
 	author = "authors"
 
 [[menus.main]]
-name = 'Home'
+name = 'Posts'
 pageRef = '/'
 weight = 10
 
