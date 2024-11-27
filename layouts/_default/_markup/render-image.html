@@ -4,7 +4,7 @@
   <figure class="figure" id="id-{{ .Destination | crypto.FNV32a }}">
     {{ partial "image.html" (dict "Src" .Destination "alt" .Text) }}
     <figcaption class="figure-caption">
-      <b class="image-ref-color pe-1">Image {{ .Ordinal | math.Add 1 }}</b>
+      <b class="image-ref-color pe-1">Image <span class="counter">{{ .Ordinal | math.Add 1 }}</span></b>
       {{ .Text }}
     </figcaption>
   </figure>

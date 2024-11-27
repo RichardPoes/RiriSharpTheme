@@ -20,9 +20,9 @@ Amet eu cillum ut reprehenderit culpa aliquip labore laborum amet sit sit duis.
 Laborum id proident nostrud dolore laborum reprehenderit quis mollit nulla amet veniam officia id id.
 Aliquip in deserunt qui magna duis qui pariatur officia sunt deserunt.
 
-{{< math "eq:pi" >}}
+{{< equation "eq:pi" >}}
 4\sum_{k=0}^\infty \frac{(-1)^k}{2k+1} = \pi
-{{< /math >}}
+{{< /equation >}}
 
 Donec imperdiet commodo velit.
 Curabitur posuere urna orci, sit amet tempor quam dictum fermentum.
@@ -32,9 +32,9 @@ Etiam ac metus eu felis placerat rhoncus.
 Curabitur eu sem rutrum, pulvinar nibh sit amet, efficitur erat.
 Fusce vel pretium felis.
 
-{{< math "eq:gauss" "The Gaussian integral" >}}
+{{< equation "eq:gauss" "The Gaussian integral" >}}
 \int_{-\infty}^{\infty}\mathrm{e}^{-x^2}\mathrm{d}x = \sqrt{2\pi}
-{{< /math >}}
+{{< /equation >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Vivamus condimentum viverra purus, in vehicula lorem condimentum in.
