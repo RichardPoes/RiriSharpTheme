@@ -23,6 +23,10 @@
     -moz-osx-font-smoothing: grayscale
   }
   
-  .ri-fx::before {
+  .ri-x-outline::before {
     content: "\e900";
+  }
+
+  .ri-ririsharp-outline::before {
+    content: "\e901";
   }

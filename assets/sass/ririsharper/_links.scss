@@ -42,5 +42,9 @@ a {
         .eq-ref-color {
             color: map-get($properties, eq-ref-color);
         }
+
+        .ext-ref-color {
+            color: map-get($properties, ext-ref-color);
+        }
     }
 }

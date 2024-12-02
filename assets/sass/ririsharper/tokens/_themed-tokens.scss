@@ -23,8 +23,9 @@ $themes: (
         navbar-toggler-color: $white,
         navbar-toggler-focus-color: $white,
         caption-color: $ririsharp-grey-800,
-        img-ref-color: $ririsharp-red-500,
+        img-ref-color: $ririsharp-yellow-500,
         eq-ref-color: $ririsharp-blue-500,
+        ext-ref-color: $ririsharp-red-500,
     ),
     dark: (
         red: $ririsharp-red-500,
@@ -48,7 +49,8 @@ $themes: (
         navbar-toggler-color: $black,
         navbar-toggler-focus-color: $white,
         caption-color: $ririsharp-grey-300,
-        img-ref-color: $ririsharp-red-500,
+        img-ref-color: $ririsharp-yellow-500,
         eq-ref-color: $ririsharp-blue-200,
+        ext-ref-color: $ririsharp-red-400,
     )
 );

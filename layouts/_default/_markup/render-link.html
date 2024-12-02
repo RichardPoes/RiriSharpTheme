@@ -1,0 +1,14 @@
+{{- $u := urls.Parse .Destination -}}
+<a class="icon-link icon-link-hover ext-ref-color" href="{{ .Destination | safeURL }}"
+{{- with .Title }} title="{{ . }}"{{ end -}}
+{{- if $u.IsAbs }} rel="external"{{ end -}}
+>
+{{ if $u.IsAbs }}
+<i class="bi bi-link-45deg"></i>
+{{ else }}
+<i class="ri ri-ririsharp-outline"></i>
+{{ end }}
+
+  {{- with .Text }}{{ . }}{{ end -}}
+</a>
+{{- /* chomp trailing newline */ -}}

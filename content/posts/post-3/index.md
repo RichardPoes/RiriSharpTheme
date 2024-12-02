@@ -85,20 +85,8 @@ Etiam maximus condimentum diam id sollicitudin.
 Nam pulvinar velit quis pellentesque euismod.
 Fusce at sem elit.
 
-Donec accumsan lacinia lorem a accumsan.
-Vivamus dictum sed mauris ut tincidunt.
-Vestibulum sed dolor sodales, tincidunt velit eu, porttitor ante.
-Fusce porta gravida facilisis.
-Sed odio nunc, suscipit non justo id, ultrices lacinia quam.
-Nunc nisl justo, tempor in commodo nec, facilisis nec justo.
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-Nullam viverra facilisis libero at semper.
-Vestibulum sagittis maximus risus, sit amet dapibus lorem viverra sed.
-Duis vehicula enim vel augue sodales, ac convallis felis mattis.
-Etiam elementum risus eget ante blandit mattis.
-Maecenas porta eros leo, eu pellentesque augue sollicitudin ut.
-Donec vitae ligula quis est mollis laoreet.
-
 We can now reference to {{< cref-img bryce-canyon.jpg "this image" >}} by giving it our own name, or we simply refer to it as {{< cref-img bryce-canyon.jpg >}}.
 Moreover, we saw a definition for \(\pi\) in {{< cref-eq "eq:pi">}}. 
 In {{< cref-eq bryce-canyon.jpg "the other equation" >}} we saw \(\pi\) come up again.
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+Link to [Post 2](/posts/post-2).
