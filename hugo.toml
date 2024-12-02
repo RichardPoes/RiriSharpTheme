@@ -27,8 +27,6 @@ weight = 30
     extended = false
     min = "0.116.0"
 
-
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]

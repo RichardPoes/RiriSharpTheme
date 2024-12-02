@@ -35,8 +35,8 @@ a {
 
 @each $theme, $properties in $themes {
     [data-bs-theme="#{$theme}"] {
-        .image-ref-color {
-            color: map-get($properties, image-ref-color);
+        .img-ref-color {
+            color: map-get($properties, img-ref-color);
         }
 
         .eq-ref-color {
