@@ -5,11 +5,11 @@
     {{ range .Pages }}
     <div class="row my-4 mx-2 mx-lg-0 p-2 border rounded border-2 position-relative border-hover-tertiary">
         <div class="col-12 col-sm-2">
-            <div class="h-100 d-flex flex-column justify-content-center">
+            <div class="h-100 d-flex flex-column justify-content-center">                
                 <figure class="figure">
                     {{ partial "image.html" (dict 
-                    "Src" "https://www.gravatar.com/avatar/{{ .Params.email | md5 }}?s=350&d=mp"
-                    "alt" "Gravatar of {{ .Params.name }}"
+                    "Src" (printf "https://www.gravatar.com/avatar/%s?s=350&d=mp" (.Params.email | md5))
+                    "alt" (printf "Gravatar of %s" .Params.name)
                     "Classes" "rounded-circle") }}
                 </figure>
             </div>
@@ -28,5 +28,4 @@
     </div>
     {{ end }}
 </div>
-
 {{ end }}
