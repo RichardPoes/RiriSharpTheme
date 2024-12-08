@@ -1,0 +1,10 @@
+{{/* Banner image with optional caption */}}
+<figure class="figure">
+  {{ partial "image.html" (dict "Src" .image.RelPermalink "alt" "banner image of post") }}
+  {{ with .page.Param "bannerCaption" }}
+  <figcaption class="figure-caption">
+    <b class="img-ref-color pe-1">Image <span class="counter">1</span></b>
+    {{ . }}
+  </figcaption>
+  {{ end }}
+</figure>
