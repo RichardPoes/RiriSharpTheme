@@ -5,6 +5,7 @@
   </div>
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
+  {{ $page := . }}
   <div class="row">
     <h4 class="text-primary mb-0"><strong>{{ .Summary }}</strong></h4>
   </div>
@@ -30,13 +31,9 @@
 <div class="container-text">
   <div class="post-banner-image">
     {{ with index (.Resources.Match "banner.*") 0 }}
-    <figure class="figure">
-      {{ partial "image.html" (dict "Src" .RelPermalink "alt" "banner image of post") }}
-    </figure>
+      {{ partial "banner-image.html" (dict "image" . "page" $page) }}
     {{ else with index (.Resources.Match "cover.*") 0 }}
-    <figure class="figure">
-      {{ partial "image.html" (dict "Src" .RelPermalink "alt" "banner image of post") }}
-    </figure>
+      {{ partial "banner-image.html" (dict "image" . "page" $page) }}
     {{ end }}
   </div>
   {{ .Content }}
