@@ -72,19 +72,6 @@ Etiam ac metus eu felis placerat rhoncus.
 Curabitur eu sem rutrum, pulvinar nibh sit amet, efficitur erat.
 Fusce vel pretium felis.
 
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-Vivamus vitae suscipit lectus.
-Etiam finibus blandit magna, id suscipit sem pulvinar vitae.
-Suspendisse blandit ultricies mi non tincidunt.
-Vestibulum sit amet placerat est.
-Phasellus ornare libero a magna iaculis eleifend.
-Nulla facilisi.
-Suspendisse sagittis ornare libero eu dapibus.
-Proin a laoreet tortor.
-Etiam maximus condimentum diam id sollicitudin.
-Nam pulvinar velit quis pellentesque euismod.
-Fusce at sem elit.
-
 We can now reference to {{< cref-img bryce-canyon.jpg "this image" >}} by giving it our own name, or we simply refer to it as {{< cref-img bryce-canyon.jpg >}}.
 Moreover, we saw a definition for \(\pi\) in {{< cref-eq "eq:pi">}}. 
 In {{< cref-eq bryce-canyon.jpg "the other equation" >}} we saw \(\pi\) come up again.
@@ -94,3 +81,4 @@ Link to [Post 2](/posts/post-2).
  <i class="ri ri-x-outline"></i>&nbsp;<i class="ri ri-ririsharp-outline"></i>
  {{< /rawhtml >}}
  are in raw html.
+ Keyboard strokes: {{< kbd >}}Ctrl{{< /kbd >}}, {{< kbd >}}Alt{{< /kbd >}}, {{< kbd >}}Del{{< /kbd >}}
