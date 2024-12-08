@@ -4,8 +4,8 @@
         <div class="col d-flex justify-content-center">
             <figure class="figure">
                 {{ partial "image.html" (dict 
-                "Src" "https://www.gravatar.com/avatar/{{ .Params.email | md5 }}?s=350&d=mp"
-                "alt" "Gravatar of {{ .Params.name }}"
+                "Src" (printf "https://www.gravatar.com/avatar/%s?s=350&d=mp" (.Params.email | md5))
+                "alt" (printf "Gravatar of %s" .Params.name)
                 "Classes" "rounded-circle") }}
             </figure>
         </div>
