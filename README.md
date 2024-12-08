@@ -47,6 +47,16 @@ echo "theme = 'RiriSharpTheme'" >> hugo.toml
 hugo server
 ```
 
+Add the following lines to you `hugo.toml` file:
+
+```toml
+ignoreFiles = ["themes/RiRiSharpTheme/content/"]
+
+[taxonomies]
+	tag = "tags"
+	author = "authors"
+```
+
 ## Configuration
 Configuration should be rather simple and straightforward.
 
