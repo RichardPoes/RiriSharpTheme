@@ -1,11 +1,20 @@
 // Typography
 $ririsharp-headings-font: 'Quicksand', sans-serif;
 $ririsharp-body-font: 'Quicksand', sans-serif;
+$ririsharp-code-font: 'CascadiaCode', 'Consolas', monospace;
 $ririsharp-body-font-size: 1.1rem;
+
+// Borders
+$ririsharp-border-radius: .375rem;
 
 // Captions
 $ririsharp-caption-font-size: 0.875em;
 $ririsharp-caption-margin-top: -1em;
+
+// Code
+$ririsharp-code-border-radius: 2px;
+$ririsharp-code-padding-x: 2px;
+$ririsharp-code-padding-y: 1px;
 
 // Icons
 $ririsharp-icon-link-gap: 0.5ch;

@@ -27,6 +27,8 @@ $themes: (
         eq-ref-color: $ririsharp-blue-500,
         ext-ref-color: $ririsharp-red-500,
         key-border-color: $ririsharp-blue-500,
+        code-bg: $ririsharp-grey-800,
+        code-color: $ririsharp-grey-150,
     ),
     dark: (
         red: $ririsharp-red-500,
@@ -54,5 +56,7 @@ $themes: (
         eq-ref-color: $ririsharp-blue-200,
         ext-ref-color: $ririsharp-red-400,
         key-border-color: $ririsharp-blue-200,
+        code-bg: $ririsharp-grey-800,
+        code-color: $ririsharp-grey-150,
     )
 );

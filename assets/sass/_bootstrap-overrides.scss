@@ -1,9 +1,13 @@
 @import 'ririsharper/tokens/other-tokens';
 
+// Random variables
+$border-radius: $ririsharp-border-radius;
+
 // Fonts
 $font-family-sans-serif: $ririsharp-body-font;
 $headings-font-family: $ririsharp-headings-font;
 $font-size-base: $ririsharp-body-font-size;
+$font-family-monospace: $ririsharp-code-font;
 
 // Navbar
 $nav-link-font-size: $ririsharp-nav-link-font-size;

@@ -1,20 +1,34 @@
 @import 'tokens/other-tokens';
 @import 'tokens/themed-tokens';
 
-kbd {
-    border-width: $ririsharp-key-border-width;
-    border-style: $ririsharp-key-border-style;
-    margin-right: $ririsharp-key-shadow-thickness;
+kbd::before {
+    content: "";
+    position: absolute;
+    top: $ririsharp-key-border-width;
+    right: $ririsharp-key-border-width;
+    bottom: $ririsharp-key-border-width;
+    left: $ririsharp-key-border-width;
+    border-radius: calc(#{$ririsharp-border-radius} - #{$ririsharp-key-border-width});
+    z-index: -1;
 }
+
+kbd {
+    position: relative;
+    border-radius: $ririsharp-border-radius;
+    margin-right: $ririsharp-key-shadow-thickness;
+    z-index: 1;
+}
+
 
 @each $theme, $properties in $themes {
     [data-bs-theme="#{$theme}"] {
-        kbd {
-            color: map-get($properties, body-bg);
+        kbd::before {
             background-color: map-get($properties, body-color);
+        }
 
+        kbd {
             $key-border-color: map-get($properties, key-border-color);
-            border-color: $key-border-color;
+            background: linear-gradient(to bottom right, $red, rgba($key-border-color, 0.7));
             box-shadow: $ririsharp-key-shadow-thickness $ririsharp-key-shadow-thickness 0px rgba($key-border-color, 0.7)
         }
     }

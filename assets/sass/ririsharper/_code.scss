@@ -1,0 +1,19 @@
+@import 'tokens/themed-tokens';
+@import 'tokens/other-tokens';
+
+code {
+    padding-left: $ririsharp-code-padding-x;
+    padding-right: $ririsharp-code-padding-x;
+    padding-top: $ririsharp-code-padding-y;
+    padding-bottom: $ririsharp-code-padding-y;
+    border-radius: $ririsharp-code-border-radius;
+}
+
+@each $theme, $properties in $themes {
+    [data-bs-theme="#{$theme}"] {
+        code {
+            background-color: map-get($properties, code-bg);
+            color: map-get($properties, code-color);
+        }
+    }
+}
