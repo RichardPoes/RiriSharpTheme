@@ -1,0 +1,21 @@
+@import 'tokens/other-tokens';
+@import 'tokens/themed-tokens';
+
+kbd {
+    border-width: $ririsharp-key-border-width;
+    border-style: $ririsharp-key-border-style;
+    margin-right: $ririsharp-key-shadow-thickness;
+}
+
+@each $theme, $properties in $themes {
+    [data-bs-theme="#{$theme}"] {
+        kbd {
+            color: map-get($properties, body-bg);
+            background-color: map-get($properties, body-color);
+
+            $key-border-color: map-get($properties, key-border-color);
+            border-color: $key-border-color;
+            box-shadow: $ririsharp-key-shadow-thickness $ririsharp-key-shadow-thickness 0px rgba($key-border-color, 0.7)
+        }
+    }
+}

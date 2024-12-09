@@ -10,7 +10,7 @@ $themes: (
         red-rgb: to-rgb($ririsharp-red-500),
         tertiary-bg-rgb: to-rgb($ririsharp-grey-100),
         body-bg: $white,
-        body-color: $black,
+        body-color: $ririsharp-grey-900,
         bg-primary: $ririsharp-red-500,
         bg-primary-text-color: $white,
         link-color-rgb: to-rgb($ririsharp-red-500),
@@ -26,6 +26,7 @@ $themes: (
         img-ref-color: $ririsharp-yellow-500,
         eq-ref-color: $ririsharp-blue-500,
         ext-ref-color: $ririsharp-red-500,
+        key-border-color: $ririsharp-blue-500,
     ),
     dark: (
         red: $ririsharp-red-500,
@@ -52,5 +53,6 @@ $themes: (
         img-ref-color: $ririsharp-yellow-500,
         eq-ref-color: $ririsharp-blue-200,
         ext-ref-color: $ririsharp-red-400,
+        key-border-color: $ririsharp-blue-200,
     )
 );

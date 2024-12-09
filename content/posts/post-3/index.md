@@ -81,4 +81,6 @@ Link to [Post 2](/posts/post-2).
  <i class="ri ri-x-outline"></i>&nbsp;<i class="ri ri-ririsharp-outline"></i>
  {{< /rawhtml >}}
  are in raw html.
- Keyboard strokes: {{< kbd >}}Ctrl{{< /kbd >}}, {{< kbd >}}Alt{{< /kbd >}}, {{< kbd >}}Del{{< /kbd >}}
+ Keyboard strokes: {{< kbd >}}Ctrl{{< /kbd >}}, {{< kbd >}}Alt{{< /kbd >}}, {{< kbd >}}Del{{< /kbd >}}.
+ Curabitur eu sem rutrum, pulvinar nibh sit amet, efficitur erat.
+Fusce vel pretium felis.

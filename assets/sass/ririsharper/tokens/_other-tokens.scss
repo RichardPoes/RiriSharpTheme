@@ -3,18 +3,23 @@ $ririsharp-headings-font: 'Quicksand', sans-serif;
 $ririsharp-body-font: 'Quicksand', sans-serif;
 $ririsharp-body-font-size: 1.1rem;
 
-// Navbar
-$ririsharp-nav-link-font-size: 1.4rem;
-$ririsharp-navbar-toggler-font-size: 1.5rem;
-$ririsharp-nav-link-padding-x: 1.1rem;
+// Captions
+$ririsharp-caption-font-size: 0.875em;
+$ririsharp-caption-margin-top: -1em;
 
 // Icons
-$ririsharp-icon-link-gap: 0.5em;
+$ririsharp-icon-link-gap: 0.5ch;
 $ririsharp-icon-link-padding-start: 0.05em;
 
 // Images
 $ririsharp-post-banner-max-image-height: 400px;
 
-// Captions
-$ririsharp-caption-font-size: 0.875em;
-$ririsharp-caption-margin-top: -1em;
+// Keys
+$ririsharp-key-border-width: 1px;
+$ririsharp-key-border-style: solid;
+$ririsharp-key-shadow-thickness: 2px;
+
+// Navbar
+$ririsharp-nav-link-font-size: 1.4rem;
+$ririsharp-navbar-toggler-font-size: 1.5rem;
+$ririsharp-nav-link-padding-x: 1.1rem;
