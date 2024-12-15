@@ -1,35 +1,48 @@
 @import 'tokens/other-tokens';
 @import 'tokens/themed-tokens';
 
+kbd {
+    position: relative;
+    padding: $ririsharp-key-border-width + 1;
+    margin-right: 2 * $ririsharp-key-border-width;
+    white-space: nowrap; // Prevents the start of kbd on a different line than the rest
+}
+
 kbd::before {
     content: "";
     position: absolute;
-    top: $ririsharp-key-border-width;
-    right: $ririsharp-key-border-width;
-    bottom: $ririsharp-key-border-width;
-    left: $ririsharp-key-border-width;
+    top: -1 * $ririsharp-key-border-width;
+    left: -1 * $ririsharp-key-border-width;
+    right: -1 * $ririsharp-key-border-width;
+    bottom: -1 * $ririsharp-key-border-width;
     border-radius: calc(#{$ririsharp-border-radius} - #{$ririsharp-key-border-width});
     z-index: -1;
 }
 
-kbd {
-    position: relative;
-    border-radius: $ririsharp-border-radius;
-    margin-right: $ririsharp-key-shadow-thickness;
-    z-index: 1;
+kbd::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: -2 * $ririsharp-key-border-width;
+    bottom: -2 * $ririsharp-key-border-width;
+    border-radius: calc(#{$ririsharp-border-radius} - #{$ririsharp-key-border-width});
+    z-index: -2;
 }
 
 
 @each $theme, $properties in $themes {
     [data-bs-theme="#{$theme}"] {
+        $key-border-color: map-get($properties, key-border-color);
+        $red: map-get($properties, red);
+        $blue: map-get($properties, blue);
+
         kbd::before {
-            background-color: map-get($properties, body-color);
+            background: linear-gradient(to bottom right, $red, $key-border-color);
         }
 
-        kbd {
-            $key-border-color: map-get($properties, key-border-color);
-            background: linear-gradient(to bottom right, $red, rgba($key-border-color, 0.7));
-            box-shadow: $ririsharp-key-shadow-thickness $ririsharp-key-shadow-thickness 0px rgba($key-border-color, 0.7)
+        kbd::after {
+            background: linear-gradient(to bottom right, $red, $key-border-color);
         }
     }
 }
