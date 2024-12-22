@@ -7,8 +7,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // Find the element with the id equal to the counterId
         const targetElement = document.getElementById(counterId);
+        console.log(targetElement);
         if (!targetElement) return;
-
+        
         const counterSpan = targetElement.querySelector('.counter');
         if (!counterSpan) return;
 

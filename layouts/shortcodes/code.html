@@ -1,0 +1,10 @@
+{{ if (isset .Params 0) }}
+<pre>
+    <code class="language-{{ index .Params 1 }}">
+        {{ .Inner }}
+    </code>
+</pre>
+<script>hljs.highlightAll();</script>
+{{ else }}
+No code parameter provided
+{{ end }}

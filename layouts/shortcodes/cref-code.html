@@ -1,0 +1,8 @@
+<a class="icon-link icon-link-hover code-ref-color" href="#id-{{index .Params 0 | crypto.FNV32a }}">
+    <i class="bi bi-braces-asterisk"></i>
+    {{ if (isset .Params 1) }}
+    {{ index .Params 1 }}
+    {{ else }}
+    code block <span data-rst-counter-id="id-{{index .Params 0 | crypto.FNV32a }}"></span>
+    {{ end }}
+</a>

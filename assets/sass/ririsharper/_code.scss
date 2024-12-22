@@ -17,3 +17,35 @@ code {
         }
     }
 }
+
+.code-highlighting-banner {
+    justify-content: space-between;
+    display: flex;
+    border-top-left-radius: $ririsharp-code-block-border-radius;
+    border-top-right-radius: $ririsharp-code-block-border-radius;
+    align-items: center;
+    align-items: center;
+    padding: $ririsharp-code-block-header-padding;
+    font-family: $ririsharp-code-font;
+}
+
+.hljs {
+    border-bottom-right-radius: $ririsharp-code-block-border-radius;
+    border-bottom-left-radius: $ririsharp-code-block-border-radius;
+}
+
+.code-caption {
+    font-size: $ririsharp-caption-font-size;
+    margin-top: $ririsharp-caption-margin-top;
+}
+
+@each $theme, $properties in $themes {
+    [data-bs-theme="#{$theme}"] {
+        .code-highlighting-banner {
+            background-color: map-get($properties, code-block-header-bg);
+        }
+        .code-ref-color {
+            color: map-get($properties, code-ref-color);
+        }
+    }
+}

@@ -4,17 +4,42 @@ I have tried to leave as much functionality the same, while offering a unique st
 
 ## Features
 - Responsive
-- Both dark & light theme
+- Dark & light theme
 - Minimalistic design
 - Usage of Bootstrap
 - Minimal usage of javascript (frameworks)
 - About page with usage of [Gravatar](https://gravatar.com/)
 - Posts with cover images with fallback
 - Post with banner images with double fallback
-- Images with captions and reference possibilities
+- Images, equations and internal-links with captions and reference possibilities
 - Multi author support
+- Code highlighting using [highlight.js](https://github.com/highlightjs/highlight.js/)
 
-### Image captioning & referencing
+
+### Multi author support
+By adding a `authors = ["Name of author"]` in your post configuration, an image with link will be created to the author page.
+At `<baseUrl>/authors/` you can find a list of all the authors, accompanied with a small summary.
+Clicking trough on the author will give you a detailed page of the author, along with a list of posts written by them.
+
+## Referencing & Captioning
+I have tried to enforce captioning on all types of inserted content. 
+Right now that is: images, equations, links (sort of) and code blocks.
+This section will explain how it works for each type.
+I wanted to make it consistent, but given that there is already a lot of markdown syntax in place, this is hard.
+
+### Linking
+You can both link to internal, as well as external sides.
+Both will be handled (optionally) differently.
+Let us first consider the two different kind of links:
+```
+[Duck Duck Go](https://duckduckgo.com).
+[Post 2](/posts/post-2).
+```
+
+The template will automatically see whether it is an internal or an external link.
+It will style the link text and decorate it with the correct icon accordingly.
+
+### Images
 All images will automatically be captioned.
 For instance, when we write this:
 ```markdown
@@ -31,10 +56,57 @@ The first option will reference to this image by "image `<imageNumber>`", where 
 The latter option will override this with the text provided.
 Of course, both reference are clickable.
 
-### Multi author support
-By adding a `authors = ["Name of author"]` in your post configuration, an image with link will be created to the author page.
-At `<baseUrl>/authors/` you can find a list of all the authors, accompanied with a small summary.
-Clicking trough on the author will give you a detailed page of the author, along with a list of posts written by them.
+### Equations
+Let us create an equation:
+```
+{{< equation "eq:pi" >}}
+4\sum_{k=0}^\infty \frac{(-1)^k}{2k+1} = \pi
+{{< /equation >}}
+```
+
+You can add a caption to any equation, optionally.
+Automatic numbering will also be applied.
+We can then reference this equation by doing either of these things.
+```
+{{< cref-eq "eq:pi">}}. 
+{{< cref-eq "eq:pi" "the other equation" >}}
+```
+
+The first option will reference to this equation by "equation `<equationNumber>`", where `<equationNumber>` will be the correct equaiton number.
+The latter option will override this with the text provided.
+Of course, both reference are clickable.
+
+### Code blocks
+We can write a code block like this:
+
+```json {caption="An example of a json file" id="code:ex-json"}
+{
+  "key": "value",
+  "dictKey": {
+      "key1": "Yeah",
+      "key2": "Nope",
+  },
+  "SomeArray": [
+      "True",
+      1,
+      false
+  ]    
+}
+```
+As you can see, there's more necessary than only the language.
+This is because we want to be able to caption it and to cross-reference it later on.
+I know this is inconsistent with the syntax of image referencing. 
+Hopefully I can find a way to make it consistent.
+
+Anyways, you can now reference to this code block by typing either
+```
+{{< cref-code "code:ex-json" >}}
+{{< cref-code "code:ex-json" "this code block" >}}
+```
+The first option will reference to this image by "code block `<codeBlockNumber>`", where `<codeBlockNumber>` will be the correct code block number.
+The latter option will override this with the text provided.
+Of course, both reference are clickable.
+
 
 ## Installation
 Installation is simple and just like Ananke:

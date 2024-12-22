@@ -26,9 +26,11 @@ $themes: (
         img-ref-color: $ririsharp-yellow-500,
         eq-ref-color: $ririsharp-blue-500,
         ext-ref-color: $ririsharp-red-500,
+        code-ref-color: $ririsharp-red-700,
         key-border-color: $ririsharp-blue-500,
         code-bg: $ririsharp-grey-800,
         code-color: $ririsharp-grey-150,
+        code-block-header-bg: $ririsharp-grey-850,
     ),
     dark: (
         red: $ririsharp-red-500,
@@ -55,8 +57,10 @@ $themes: (
         img-ref-color: $ririsharp-yellow-500,
         eq-ref-color: $ririsharp-blue-200,
         ext-ref-color: $ririsharp-red-400,
+        code-ref-color: $ririsharp-red-300,
         key-border-color: $ririsharp-blue-300,
         code-bg: $ririsharp-grey-800,
         code-color: $ririsharp-grey-150,
+        code-block-header-bg: $ririsharp-grey-850,
     )
 );

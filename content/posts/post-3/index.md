@@ -74,7 +74,7 @@ Fusce vel pretium felis.
 
 We can now reference to {{< cref-img bryce-canyon.jpg "this image" >}} by giving it our own name, or we simply refer to it as {{< cref-img bryce-canyon.jpg >}}.
 Moreover, we saw a definition for \(\pi\) in {{< cref-eq "eq:pi">}}. 
-In {{< cref-eq bryce-canyon.jpg "the other equation" >}} we saw \(\pi\) come up again.
+In {{< cref-eq "eq:pi" "the other equation" >}} we saw \(\pi\) come up again.
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 Link to [Post 2](/posts/post-2).
 {{< rawhtml >}}

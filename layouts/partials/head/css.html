@@ -1,18 +1,31 @@
 {{ if hugo.IsProduction }}
 
 {{ $sass := resources.Get "sass/main.scss" }}
-{{ $style := $sass | css.Sass | minify }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
-{{ $ririIcons := resources.Get "css/ririsharp-icons.css" | minify }}
-<link rel="stylesheet" href="{{ $ririIcons.Permalink }}">
-{{ $icons := resources.Get "css/bootstrap-icons.min.css" }}
-<link rel="stylesheet" href="{{ $icons.Permalink }}">
+{{ $style := $sass | css.Sass | minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+{{ $ririIcons := resources.Get "css/ririsharp-icons.css" | minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $ririIcons.Permalink }}" integrity="{{ $ririIcons.Data.Integrity }}">
+
+{{ $icons := resources.Get "css/bootstrap-icons.css" | minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $icons.Permalink }}" integrity="{{ $icons.Data.Integrity }}">
+
+{{ $codehighlightingTheme := resources.Get "css/vs2015.css" | minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $codehighlightingTheme.Permalink }}" integrity="{{ $codehighlightingTheme.Data.Integrity }}">
 
 {{ else }}
 
 {{ $sass := resources.Get "sass/main.scss" }}
 {{ $style := $sass | css.Sass | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
-{{ $icons := resources.Get "css/bootstrap-icons.min.css" | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $icons.Permalink }}" integrity="{{ $icons.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+{{ $ririIcons := resources.Get "css/ririsharp-icons.css" }}
+<link rel="stylesheet" href="{{ $ririIcons.Permalink }}">
+
+{{ $icons := resources.Get "css/bootstrap-icons.css" }}
+<link rel="stylesheet" href="{{ $icons.Permalink }}">
+
+{{ $codehighlightingTheme := resources.Get "css/vs2015.css"}}
+<link rel="stylesheet" href="{{ $codehighlightingTheme.Permalink }}">
+
 {{ end }}
