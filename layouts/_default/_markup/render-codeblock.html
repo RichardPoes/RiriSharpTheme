@@ -3,7 +3,7 @@
     <span class="ps-1">{{ .Type }}</span>
     <button class="btn" onclick="copyToClipboard(this)"><i class="bi bi-clipboard"></i></button>
   </div>
-  <pre><code class="language-{{ .Type }}">{{ .Inner | safeHTML }}</code></pre>
+  <pre><code class="language-{{ .Type }}">{{ .Inner }}</code></pre>
   <script>hljs.highlightAll();</script>
   <div class="text-center code-caption mb-3 mt-1">
     <b class="code-ref-color pe-1">Code block <span class="counter">{{ .Ordinal | math.Add 1 }}</span></b>

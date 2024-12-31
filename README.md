@@ -98,6 +98,7 @@ Of course, both references are clickable.
 ### Code blocks
 We can write a code block like this:
 
+~~~
 ```json {caption="An example of a json file" id="code:ex-json"}
 {
   "key": "value",
@@ -112,6 +113,7 @@ We can write a code block like this:
   ]    
 }
 ```
+~~~
 As you can see, one needs to add more than only the language identifier.
 These caption and id tags speak for themselves.
 
