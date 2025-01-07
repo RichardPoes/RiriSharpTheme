@@ -16,11 +16,14 @@ figure:not(:has(figcaption)) {
     text-align: center;
 }
 
+.figure-caption {
+    font-size: $ririsharp-caption-font-size;
+}
+
 @each $theme, $properties in $themes {
     [data-bs-theme="#{$theme}"] {
         .figure-caption {
             color: map-get($properties, caption-color);
-            font-size: $ririsharp-caption-font-size;
         }
     }
 }

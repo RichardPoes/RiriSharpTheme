@@ -1,4 +1,4 @@
-<div class="text-center mb-4 mathjax-equation" id="id-{{ .Get 0 | crypto.FNV32a }}">
+<div class="text-center mb-4 mathjax-equation" id="id-{{ .Get 0 | hash.FNV32a }}">
     <span>
         \[ {{ .Inner | safeHTML }} \]
     </span>

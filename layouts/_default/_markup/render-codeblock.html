@@ -1,4 +1,4 @@
-<div id="id-{{ .Attributes.id | crypto.FNV32a }}">
+<div id="id-{{ .Attributes.id | hash.FNV32a }}">
   <div class="code-highlighting-banner">
     <span class="ps-1">{{ .Type }}</span>
     <button class="btn" onclick="copyToClipboard(this)"><i class="bi bi-clipboard"></i></button>

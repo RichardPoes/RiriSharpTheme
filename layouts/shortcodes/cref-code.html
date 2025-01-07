@@ -1,9 +1,13 @@
-<a class="icon-link icon-link-hover code-ref-color" href="#id-{{index .Params 0 | crypto.FNV32a }}">
+<a class="icon-link icon-link-hover code-ref-color" href="#id-{{ .Get "id" | hash.FNV32a }}">
     <i class="bi bi-braces-asterisk"></i>
-    {{ if (isset .Params 1) }}
-    {{ index .Params 1 }}
+    {{ if .IsNamedParams }}
+        {{ if .Get "caption" }}
+            {{ .Get "caption" }}
+        {{ else }}
+            code block <span data-rst-counter-id="id-{{ .Get "id" | hash.FNV32a }}"></span>
+        {{ end }}
     {{ else }}
-    code block <span data-rst-counter-id="id-{{index .Params 0 | crypto.FNV32a }}"></span>
+        code block <span data-rst-counter-id="id-{{ .Get "id" | hash.FNV32a }}"></span>
     {{ end }}
 </a>
 {{- /* chomp trailing newline */ -}}

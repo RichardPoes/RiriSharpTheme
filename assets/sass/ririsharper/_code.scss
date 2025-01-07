@@ -9,15 +9,6 @@ code {
     border-radius: $ririsharp-code-border-radius;
 }
 
-@each $theme, $properties in $themes {
-    [data-bs-theme="#{$theme}"] {
-        code {
-            background-color: map-get($properties, code-bg);
-            color: map-get($properties, code-color);
-        }
-    }
-}
-
 .code-highlighting-banner {
     justify-content: space-between;
     display: flex;
@@ -41,6 +32,10 @@ code {
 
 @each $theme, $properties in $themes {
     [data-bs-theme="#{$theme}"] {
+        code {
+            background-color: map-get($properties, code-bg);
+            color: map-get($properties, code-color);
+        }
         .code-highlighting-banner {
             background-color: map-get($properties, code-block-header-bg);
         }

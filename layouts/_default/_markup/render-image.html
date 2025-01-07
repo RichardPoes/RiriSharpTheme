@@ -1,7 +1,7 @@
 {{/* Thanks to https://sebastiandedeyne.com/captioned-images-with-markdown-render-hooks-in-hugo/ */}}
 {{/* If the there is a banner caption, then we offset the ordinal by 2, otherwise 1. */}}
 {{ $orindalOffset := cond (or (not (.Page.Params.bannerCaption)) (eq (trim .Page.Params.bannerCaption " ") "")) 1 2 }}
-<div class="w-100 text-center" id="id-{{ .Destination | crypto.FNV32a }}">
+<div class="w-100 text-center" id="id-{{ .Destination | hash.FNV32a }}">
   <figure class="figure">
     {{ partial "image.html" (dict "Src" .Destination "alt" .Text) }}
     <figcaption class="figure-caption">

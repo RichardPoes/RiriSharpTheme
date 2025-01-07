@@ -48,21 +48,12 @@ Cras pretium, ipsum vel rhoncus eleifend, dui neque dapibus orci, nec vulputate 
 Donec eget justo quis sapien tincidunt sollicitudin.
 Aliquam iaculis, sapien sed bibendum accumsan, quam erat condimentum lorem, in ultricies ex urna eget mi.
 
-Praesent gravida ex eu sem faucibus semper.
-Nullam ullamcorper facilisis sapien molestie fermentum.
-Duis convallis ex nec eleifend viverra.
-Ut quis erat aliquam, rhoncus tellus nec, bibendum lorem.
-Nulla lobortis, nunc sodales venenatis ultricies, ipsum odio malesuada sem, quis vehicula nibh nunc non nisl.
-Aliquam sit amet imperdiet arcu.
-Mauris ligula dolor, venenatis sit amet scelerisque id, ultricies sit amet sapien.
-Nullam nec tempus metus, a mollis velit.
-Maecenas sagittis pretium magna, a finibus nibh suscipit quis.
-Morbi interdum sapien et fringilla suscipit.
-Quisque at nulla gravida, sagittis libero eu, cursus nisl.
-Cras vel semper ex.
-Ut magna ligula, venenatis quis volutpat eu, feugiat eget massa.
-Nunc facilisis, lectus non fermentum sollicitudin, ex libero ullamcorper nulla, sed ullamcorper dui magna sit amet lacus.
-Sed sit amet ullamcorper ligula.
+{{< table caption="An example of a table" id="tab:ex-tab">}}
+| Column 1      | Column 2      |
+| ------------- | ------------- |
+| Cell 1, Row 1 | Cell 2, Row 1 |
+| Cell 1, Row 2 | Cell 1, Row 2 |
+{{< /table >}}
 
 Donec imperdiet commodo velit.
 Curabitur posuere urna orci, sit amet tempor quam dictum fermentum.
@@ -71,6 +62,21 @@ Cras pulvinar lectus ac ante vestibulum mollis.
 Etiam ac metus eu felis placerat rhoncus.
 Curabitur eu sem rutrum, pulvinar nibh sit amet, efficitur erat.
 Fusce vel pretium felis.
+
+```json {caption="An example of a json file" id="code:ex-json"}
+{
+  "key": "value",
+  "dictKey": {
+      "key1": "Yeah",
+      "key2": "Nope",
+  },
+  "SomeArray": [
+      "True",
+      1,
+      false
+  ]    
+}
+```
 
 We can now reference to {{< cref-img bryce-canyon.jpg "this image" >}} by giving it our own name, or we simply refer to it as {{< cref-img bryce-canyon.jpg >}}.
 Moreover, we saw a definition for \(\pi\) in {{< cref-eq "eq:pi">}}. 
@@ -85,3 +91,5 @@ Link to [Post 2](/posts/post-2).
  Curabitur eu sem rutrum, pulvinar nibh sit amet, efficitur erat.
 Fusce vel pretium felis.
 Some `fields =>` need separate hightlighting.
+Code block can be seen in {{< cref-code id="code:ex-json" >}}, or we can reference to it by calling it our {{< cref-code caption="our special code block" id="code:ex-json">}}.
+Tables can also be references, by using {{< cref-tab id="tab:ex-tab" >}}, or again, by calling it {{< cref-tab caption="with a custom string" id="tab:ex-tab" >}}.
