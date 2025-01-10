@@ -1,68 +1,39 @@
 +++
-title = 'Having a post with an image'
+title = 'Post showcasing all features'
+date = 2023-03-15T11:00:00-07:00
+draft = false
+tags = ['red','green','blue']
+authors = ['John Doe', 'Hank the Tank']
+summary = 'This post shows everything that is possible with this template. All code is shown and its effect on the template are shown.'
++++
+
+This post is a demonstration post.
+It is sort of self documenting, in that it will showcase all features that were build in.
+
+# Preamble
+The preamble of this post looks like 
+```toml {caption="Preamble of this post"}
++++
+title = 'Post showcasing all features'
 date = 2023-03-15T11:00:00-07:00
 draft = false
 tags = ['red','green','blue']
 authors = ['John Doe', 'Hank the Tank']
 +++
+```
+This is mostly like default Hugo, however the `authors` tag as been added.
+One can observe that in the `/content/authors` folder there are two subfolders, one for each author.
+The `_index.md` files which are contained in those folders contain all the data describing the author.
+An image of the author will be looked up using [Gravatar](https://gravatar.com/).
 
-Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis.
-Proident fugiat labore eu laboris officia Lorem enim.
-Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit.
-Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt.
-Aute ex ipsum id ut in est velit est laborum incididunt.
-Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum.
-Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.
+# Code
+Inline code can be written by typing `` `inline =>` ``, as is well known in Markdown.
+What is nice (in our opinion) is that this template supports ligatures, so that is why you didn't see `= >`.
 
-![Bryce Canyon National Park](bryce-canyon.jpg)
-Sit excepteur do velit veniam mollit in nostrud laboris incididunt ea.
-Amet eu cillum ut reprehenderit culpa aliquip labore laborum amet sit sit duis.
-Laborum id proident nostrud dolore laborum reprehenderit quis mollit nulla amet veniam officia id id.
-Aliquip in deserunt qui magna duis qui pariatur officia sunt deserunt.
-
-{{< equation "eq:pi" >}}
-4\sum_{k=0}^\infty \frac{(-1)^k}{2k+1} = \pi
-{{< /equation >}}
-
-Donec imperdiet commodo velit.
-Curabitur posuere urna orci, sit amet tempor quam dictum fermentum.
-Morbi dictum orci ut vestibulum tristique.
-Cras pulvinar lectus ac ante vestibulum mollis.
-Etiam ac metus eu felis placerat rhoncus.
-Curabitur eu sem rutrum, pulvinar nibh sit amet, efficitur erat.
-Fusce vel pretium felis.
-
-{{< equation "eq:gauss" "The Gaussian integral" >}}
-\int_{-\infty}^{\infty}\mathrm{e}^{-x^2}\mathrm{d}x = \sqrt{2\pi}
-{{< /equation >}}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Vivamus condimentum viverra purus, in vehicula lorem condimentum in.
-In quis odio a mauris varius interdum.
-Cras tincidunt lectus eu dui pharetra viverra.
-Nullam mauris felis, dictum quis elementum non, blandit quis sapien.
-Cras ultricies nunc eget quam sodales, at accumsan dui rhoncus.
-Vestibulum at turpis interdum, malesuada dui a, rutrum ante.
-Morbi nulla quam, venenatis id aliquet sed, facilisis ut urna.
-Cras pretium, ipsum vel rhoncus eleifend, dui neque dapibus orci, nec vulputate ante eros vitae magna.
-Donec eget justo quis sapien tincidunt sollicitudin.
-Aliquam iaculis, sapien sed bibendum accumsan, quam erat condimentum lorem, in ultricies ex urna eget mi.
-
-{{< table caption="An example of a table" id="tab:ex-tab">}}
-| Column 1      | Column 2      |
-| ------------- | ------------- |
-| Cell 1, Row 1 | Cell 2, Row 1 |
-| Cell 1, Row 2 | Cell 1, Row 2 |
-{{< /table >}}
-
-Donec imperdiet commodo velit.
-Curabitur posuere urna orci, sit amet tempor quam dictum fermentum.
-Morbi dictum orci ut vestibulum tristique.
-Cras pulvinar lectus ac ante vestibulum mollis.
-Etiam ac metus eu felis placerat rhoncus.
-Curabitur eu sem rutrum, pulvinar nibh sit amet, efficitur erat.
-Fusce vel pretium felis.
-
+Code blocks can simply be added by enclosing the code in backticks ` ``` `, as is common in almost all markdown flavors.
+In this template you can however add a caption and an id for referencing the created code block.
+Let's look at an example.
+~~~
 ```json {caption="An example of a json file" id="code:ex-json"}
 {
   "key": "value",
@@ -77,19 +48,105 @@ Fusce vel pretium felis.
   ]    
 }
 ```
+~~~
+This will render to:
+```json {caption="An example of a json file" id="code:ex-json"}
+{
+  "key": "value",
+  "dictKey": {
+      "key1": "Yeah",
+      "key2": "Nope",
+  },
+  "SomeArray": [
+      "True",
+      1,
+      false
+  ]    
+}
+```
+Now we can either reference it without customizing the reference text by typing `{{</* cref-code id="code:ex-json" */>}}`, which would render to {{< cref-code id="code:ex-json" >}}.
+Or we can reference to it by calling it our `{{</* cref-code caption="overridden code block reference" id="code:ex-json"*/>}}`, which would render to {{< cref-code caption="overridden code block reference" id="code:ex-json">}}.
 
-We can now reference to {{< cref-img bryce-canyon.jpg "this image" >}} by giving it our own name, or we simply refer to it as {{< cref-img bryce-canyon.jpg >}}.
-Moreover, we saw a definition for \(\pi\) in {{< cref-eq "eq:pi">}}. 
-In {{< cref-eq "eq:pi" "the other equation" >}} we saw \(\pi\) come up again.
-My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
-Link to [Post 2](/posts/post-2).
-{{< rawhtml >}}
+# Images
+Support for images is also native to Markdown, so we can simply do this by calling `![Bryce Canyon National Park](bryce-canyon.jpg)`.
+This would render to
+![Bryce Canyon National Park](bryce-canyon.jpg)
+
+Observe that the caption is the text added in the square brackets.
+The `alt`-tag will also be this caption.
+As we could with code, we can reference this image in two ways.
+We can either reference it without customizing the reference text by typing `{{</* cref-img bryce-canyon.jpg */>}}` which would render to {{< cref-img bryce-canyon.jpg >}}.
+Or we can reference to it by calling it our `{{</* cref-img bryce-canyon.jpg "this image" */>}}`, which would render to {{< cref-img bryce-canyon.jpg "this image" >}}.
+
+## Banner and cover images
+As you can see, when you clicked on this post, it had a preview image, which we call a cover image.
+When you are finally on the post, there is a banner image too.
+To add a cover image, simply add `cover.*` to your post folder, where `*` denotes that it can be any file extension.
+If no cover image is supplied, a fallback image will be used, located at `static/images/fallback.svg`.
+
+To add a banner image, simply add `banner.*` to your post folder where, again, `*` denotes that it can be any file extension.
+If no banner image is supplied, the cover image will be used as a fallback.
+If that is also not present, no banner image will be shown.
+
+# Tables
+Also support for tables is native in markdown.
+However, to be able to cross-reference created tables, an extra shortcode had to be created.
+We can render the code below
+```
+{{</* table caption="An example of a table" id="tab:ex-tab">}}
+| Column 1      | Column 2      |
+| ------------- | ------------- |
+| Cell 1, Row 1 | Cell 2, Row 1 |
+| Cell 1, Row 2 | Cell 1, Row 2 |
+{{< /table */>}}
+```
+to the table
+{{< table caption="An example of a table" id="tab:ex-tab">}}
+| Column 1      | Column 2      |
+| ------------- | ------------- |
+| Cell 1, Row 1 | Cell 2, Row 1 |
+| Cell 1, Row 2 | Cell 1, Row 2 |
+{{< /table >}}
+
+Now we can either reference it without customizing the reference text by typing `{{</* cref-tab id="tab:ex-tab" */>}}`, which would render to {{< cref-tab id="tab:ex-tab" >}}.
+Or we can reference to it by calling it our `{{</* cref-tab caption="overridden code block reference" id="tab:ex-tab"*/>}}`, which would render to {{< cref-tab caption="example of a table reference" id="tab:ex-tab">}}.
+
+# Equations
+Although not strictly part of the core markdown functionality, many markdown engines support math mode.
+Most of the time this is done by typing either `$ f(x) $`, `$$ f(x) $$`, `\( f(x) \)` or `\[ f(x) \]`.
+We only support the latter two of the four, which would render into the inline math \(f(x)\) or 
+\[f(x)\]
+respectively.
+For centered equations there is a custom shortcode, where
+```
+{{</* equation caption="The Gaussian integral" id="eq:gauss" >}}
+\int_{-\infty}^{\infty}\mathrm{e}^{-x^2}\mathrm{d}x = \sqrt{2\pi}
+{{< /equation */>}}
+```
+would render to
+{{< equation caption="The Gaussian integral" id="eq:gauss" >}}
+\int_{-\infty}^{\infty}\mathrm{e}^{-x^2}\mathrm{d}x = \sqrt{2\pi}
+{{< /equation >}}
+
+Now we can either reference it without customizing the reference text by typing `{{</* cref-eq id="eq:gauss" */>}}`, which would render to {{< cref-eq id="eq:gauss" >}}.
+Or we can reference to it by calling it our `{{</* cref-tab caption="overridden equation reference" id="eq:gauss"*/>}}`, which would render to {{< cref-eq caption="overridden equation reference" id="eq:gauss">}}.
+
+# Links
+Although links are nothing too fancy in this Hugo template, the template is able to discern between internal and external links.
+The links `[Duck Duck Go](https://duckduckgo.com)` and `[Post 2](/posts/post-2)` will be rendered as 
+[Duck Duck Go](https://duckduckgo.com) and [Post 2](/posts/post-2).
+Neat huh!
+
+# Raw HTML
+Although HUGO has a setting to support raw HTML, we thought it was best to support it merely by using a shortcode.
+The following code
+```
+{{</* rawhtml >}}
  <i class="ri ri-x-outline"></i>&nbsp;<i class="ri ri-ririsharp-outline"></i>
- {{< /rawhtml >}}
- are in raw html.
- Keyboard strokes: {{< kbd >}}Ctrl{{< /kbd >}}, {{< kbd >}}Alt{{< /kbd >}}, {{< kbd >}}Del{{< /kbd >}}.
- Curabitur eu sem rutrum, pulvinar nibh sit amet, efficitur erat.
-Fusce vel pretium felis.
-Some `fields =>` need separate hightlighting.
-Code block can be seen in {{< cref-code id="code:ex-json" >}}, or we can reference to it by calling it our {{< cref-code caption="our special code block" id="code:ex-json">}}.
-Tables can also be references, by using {{< cref-tab id="tab:ex-tab" >}}, or again, by calling it {{< cref-tab caption="with a custom string" id="tab:ex-tab" >}}.
+ {{< /rawhtml */>}}
+```
+renders to {{< rawhtml >}}<i class="ri ri-x-outline"></i>&nbsp;<i class="ri ri-ririsharp-outline"></i>{{< /rawhtml >}}. So you can never accidentally insert HTML.
+
+# Keyboard strokes
+This template has support for keyboard strokes.
+Simply type `{{</* kbd >}}Ctrl{{< /kbd */>}}, {{</* kbd >}}Alt{{< /kbd */>}}, {{</* kbd >}}Del{{< /kbd */>}}` and it will get rendered to {{< kbd >}}Ctrl{{< /kbd >}}, {{< kbd >}}Alt{{< /kbd >}}, {{< kbd >}}Del{{< /kbd >}}.
