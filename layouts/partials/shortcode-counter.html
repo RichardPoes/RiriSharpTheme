@@ -1,0 +1,5 @@
+{{ $shortcode := .Get "shortcode" }}
+{{ $content := .Page.Content }}
+{{ $matches := findRE (printf "{{< %s" $shortcode) $content }}
+{{ $count := len $matches }}
+{{ return $count }}

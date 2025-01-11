@@ -75,8 +75,8 @@ This would render to
 Observe that the caption is the text added in the square brackets.
 The `alt`-tag will also be this caption.
 As we could with code, we can reference this image in two ways.
-We can either reference it without customizing the reference text by typing `{{</* cref-img bryce-canyon.jpg */>}}` which would render to {{< cref-img bryce-canyon.jpg >}}.
-Or we can reference to it by calling it our `{{</* cref-img bryce-canyon.jpg "this image" */>}}`, which would render to {{< cref-img bryce-canyon.jpg "this image" >}}.
+We can either reference it without customizing the reference text by typing `{{</* cref-img src="bryce-canyon.jpg" */>}}` which would render to {{< cref-img src="bryce-canyon.jpg" >}}.
+Or we can reference to it by calling it our `{{</* cref-img caption="this image" src="bryce-canyon.jpg" */>}}`, which would render to {{< cref-img caption="this image" src="bryce-canyon.jpg" >}}.
 
 ## Banner and cover images
 As you can see, when you clicked on this post, it had a preview image, which we call a cover image.
@@ -110,6 +110,13 @@ to the table
 
 Now we can either reference it without customizing the reference text by typing `{{</* cref-tab id="tab:ex-tab" */>}}`, which would render to {{< cref-tab id="tab:ex-tab" >}}.
 Or we can reference to it by calling it our `{{</* cref-tab caption="overridden code block reference" id="tab:ex-tab"*/>}}`, which would render to {{< cref-tab caption="example of a table reference" id="tab:ex-tab">}}.
+
+{{< table caption="Another example of a table" id="tab:ex-tab2">}}
+| Column 1      | Column 2      |
+| ------------- | ------------- |
+| Cell 1, Row 1 | Cell 2, Row 1 |
+| Cell 1, Row 2 | Cell 1, Row 2 |
+{{< /table >}}
 
 # Equations
 Although not strictly part of the core markdown functionality, many markdown engines support math mode.

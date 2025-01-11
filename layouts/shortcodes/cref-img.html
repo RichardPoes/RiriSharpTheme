@@ -1,9 +1,8 @@
-<a class="icon-link icon-link-hover img-ref-color" href="#id-{{index .Params 0 | hash.FNV32a }}">
-    <i class="bi bi-image"></i>
-    {{ if (isset .Params 1) }}
-    {{ index .Params 1 }}
-    {{ else }}
-    image <span data-rst-counter-id="id-{{index .Params 0 | hash.FNV32a }}"></span>
-    {{ end }}
-</a>
+{{ partial "cref.html" (dict 
+"type" "img"
+"referredType" "image"
+"iconClass" "bi bi-image"
+"id" (.Get "src")
+"caption" (.Get "caption")
+) }}
 {{- /* chomp trailing newline */ -}}

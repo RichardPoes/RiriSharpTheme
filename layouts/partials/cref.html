@@ -1,0 +1,15 @@
+{{ $type := .type | default "" }}
+{{ $referredType := .referredType | default "" }}
+{{ $iconClass := .iconClass | default "" }}
+{{ $id := .id | default "" }}
+{{ $caption := .caption | default "" }}
+
+<a class="icon-link icon-link-hover {{ $type }}-ref-color" href="#id-{{ $id | hash.FNV32a }}">
+    <i class="{{ $iconClass }}"></i>
+    {{ if eq $caption "" }}
+    {{ $referredType }} <span data-rst-counter-id="id-{{ $id | hash.FNV32a }}"></span>
+    {{ else }}
+    {{ $caption }}
+    {{ end }}
+</a>
+{{- /* chomp trailing newline */ -}}

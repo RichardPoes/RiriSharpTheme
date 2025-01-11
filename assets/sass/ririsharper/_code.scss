@@ -7,6 +7,7 @@ code {
     padding-top: $ririsharp-code-padding-y;
     padding-bottom: $ririsharp-code-padding-y;
     border-radius: $ririsharp-code-border-radius;
+    white-space: nowrap;
 }
 
 .code-highlighting-banner {
@@ -23,6 +24,7 @@ code {
 .hljs {
     border-bottom-right-radius: $ririsharp-code-block-border-radius;
     border-bottom-left-radius: $ririsharp-code-block-border-radius;
+    white-space: pre;
 }
 
 .code-caption {

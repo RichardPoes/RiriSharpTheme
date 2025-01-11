@@ -1,9 +1,0 @@
-{{ if (isset .Params 0) }}
-<pre>
-    <code class="language-{{ index .Params 1 }}">
-        {{ .Inner }}
-    </code>
-</pre>
-{{ else }}
-No code parameter provided
-{{ end }}

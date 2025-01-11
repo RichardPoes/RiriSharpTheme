@@ -1,13 +1,8 @@
-<a class="icon-link icon-link-hover tab-ref-color" href="#id-{{ .Get "id" | hash.FNV32a }}">
-    <i class="bi bi-table"></i>
-    {{ if .IsNamedParams }}
-        {{ if .Get "caption" }}
-            {{ .Get "caption" }}
-        {{ else }}
-            table <span data-rst-counter-id="id-{{ .Get "id" | hash.FNV32a }}"></span>
-        {{ end }}
-    {{ else }}
-        table <span data-rst-counter-id="id-{{ .Get "id" | hash.FNV32a }}"></span>
-    {{ end }}
-</a>
+{{ partial "cref.html" (dict 
+"type" "tab"
+"referredType" "table"
+"iconClass" "bi bi-table"
+"id" (.Get "id")
+"caption" (.Get "caption")
+) }}
 {{- /* chomp trailing newline */ -}}
