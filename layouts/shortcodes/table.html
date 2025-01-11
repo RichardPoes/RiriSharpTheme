@@ -1,9 +1,9 @@
 {{ $htmlTable := .Inner | markdownify }}
 
 <div id="id-{{ .Get "id" | hash.FNV32a }}" data-rst-counter-type="table">
-    {{ $htmlTable | safeHTML }}
-    <div class="text-center tab-caption mb-3 mt-1">
+    <div class="text-center tab-caption mb-1 mt-3">
         <b class="tab-ref-color pe-1">Table <span class="counter"></span></b>
         {{ with .Get "caption" }}{{ . }}{{ end }}
     </div>
+    {{ $htmlTable | safeHTML }}
 </div>
