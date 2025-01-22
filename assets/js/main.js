@@ -33,16 +33,13 @@ function copyCounterValuesToCrefs() {
     elements.forEach(element => {
         // Get the value of the data-rst-counter-id attribute
         const counterId = element.getAttribute('data-rst-counter-id');
-        console.log(counterId);
 
         // Find the element with the id equal to the counterId
         const targetElement = document.getElementById(counterId);
         if (!targetElement) return;
-        console.log(targetElement);
 
         const counterSpan = targetElement.querySelector('.counter');
         if (!counterSpan) return;
-        console.log(counterSpan);
 
         const counterValue = counterSpan.textContent;
         if (!counterValue) return;
